@@ -54,3 +54,8 @@
 3. Acesse as aplicações localmente:
     - Abra `mf_drawer/index.html` no seu navegador.
     - Abra `mf_videos/index.html` no seu navegador.
+    - Abra `mf_videos/favorites.html` no seu navegador.
+
+### Conclusão
+
+Esta estrutura de projeto inclui duas aplicações micro-frontend que se comunicam com um BFF, utilizando a API do YouTube para buscar vídeos e com suporte a navegação por rotas e testes unitários. Certifique-se de substituir `"YOUR_YOUTUBE_API_KEY"` pela sua chave de API do YouTube antes de rodar os testes.
