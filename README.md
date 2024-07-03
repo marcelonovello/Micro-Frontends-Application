@@ -54,7 +54,7 @@
 3. Acesse as aplicações localmente:
     - Abra `mf_drawer/index.html` no seu navegador.
     - Abra `mf_videos/index.html` no seu navegador.
-    - Abra `mf_videos/favorites.html` no seu navegador.
+    - Abra `mf_drawer/favorite.html` no seu navegador.
 
 ### Conclusão
 
