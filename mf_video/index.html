@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h4>MF_VIDEOS</h4>
+            <ul>
+
+                <li><a href="index.html" id="videos-link">Vídeos</a></li>
+                <li><a href="favorite.html" id="favorites-link">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div>
+            <main class="content">
+                <h4>MF_VIDEOS</h4>
+                <input type="text" id="search_input" placeholder="PESQUISAR">
+                <button id="search_button">Buscar</button><br>            
+                <div id="videos-section" class="videos" />
+
+                <div id="videoList" class="video-grid"></div>
+            
+                <div id="favorites-section" class="favorites hidden">
+                    <p>Nenhum favorito adicionado.</p>
+                </div>
+            </main>
+        </div>  
+    </div>
+    <script src="../bff/server.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            if (path.includes('index.html')) {
+                document.getElementById('videos-link').classList.add('active');
+            } else if (path.includes('favorites.html')) {
+                document.getElementById('favorites-link').classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

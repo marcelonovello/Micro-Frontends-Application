@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h4>MF_DRAWER</h4>
+            <ul>
+                <li><a href="index.html" id="videosLink">Vídeos</a></li>
+                <li><a href="favorite.html" id="favoritesLink">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div>
+            <main class="content">
+                <h4>MF_VIDEOS</h4>
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="PESQUISAR">
+                    <button type="submit">Buscar</button>
+                </form>
+                <br>
+                <div id="videosSection" class="videos">
+                    <div id="videoList"></div>
+                </div>
+
+                <div id="favoritesSection" class="favorites hidden">
+                    <div id="favoritesList">
+                        <p>Nenhum favorito adicionado.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="../../bff/server.js"></script>
+    <script src="../../mf_video/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const path = window.location.pathname;
+            if (path.includes('index.html')) {
+                document.getElementById('videosLink').classList.add('active');
+                document.getElementById('favoritesSection').classList.add('hidden');
+                document.getElementById('videosSection').classList.remove('hidden');
+            } else if (path.includes('favorites.html')) {
+                document.getElementById('favoritesLink').classList.add('active');
+                document.getElementById('videosSection').classList.add('hidden');
+                document.getElementById('favoritesSection').classList.remove('hidden');
+            }
+
+            init(); 
+        });
+    </script>
+</body>
+</html>

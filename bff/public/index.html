@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfrontend - Vídeos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="index.html" class="active">Vídeos</a></li>
+                <li><a href="favorite.html">Favoritos (<span id="favorites-count">0</span>)</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h4>Vídeos</h4>
+            <form id="searchForm">
+                <input type="text" id="search_input" placeholder="Pesquisar vídeos">
+                <button type="submit" id="search_button">Buscar</button>
+            </form>
+            <div id="videoList" class="videos"></div>
+        </div>
+    </div> 
+</body>
+</html>

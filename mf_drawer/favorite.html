@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h4>MF_DRAWER</h4>
+            <ul>
+                <li><a href="index.html" id="videos-link">Vídeos</a></li>
+                <li><a href="favorite.html" id="favorites-link">Favoritos</a></li>
+            </ul>
+        </nav>
+        <div>
+            <main class="content">
+                <h4>MF_VIDEOS</h4>
+                <h4>FAVORITOS</h4>           
+                <div id="videos-section" class="videos">
+                    <div class="video">Vídeo 1</div>
+                    <div class="video">Vídeo 2</div>
+                    <div class="video">Vídeo 3</div>
+                    <div class="video">Vídeo 4</div>
+                    <div class="video">Vídeo 5</div>
+                    <div class="video">Vídeo 6</div>
+                    <div class="video">Vídeo 7</div>
+                    <div class="video">Vídeo 8</div>
+                    <div class="video">Vídeo 9</div>
+                    <div class="video">Vídeo 10</div>
+                    <div class="video">Vídeo 11</div>
+                    <div class="video">Vídeo 12</div>
+                </div>
+                
+                <div id="favorites-section" class="favorites hidden">
+                    <p>Nenhum favorito adicionado.</p>
+                </div>
+            </main>
+        </div>  
+    </div>
+    <script src="../bff/server.js"></script>
+    <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const path = window.location.pathname;
+                if (path.includes('index.html')) {
+                    document.getElementById('videos-link').classList.add('active');
+                } else if (path.includes('favorites.html')) {
+                    document.getElementById('favorites-link').classList.add('active');
+                }
+            });
+        </script>
+    </body>
+</html>
