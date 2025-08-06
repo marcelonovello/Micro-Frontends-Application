@@ -41,8 +41,8 @@ Micro-Frontends-Application/
 ### 1. Clone o repositório
 
     ```bash
-git clone https://github.com/marcelonovello/Micro-Frontends-Application.git
-cd Micro-Frontends-Application
+    git clone https://github.com/marcelonovello/Micro-Frontends-Application.git
+    cd Micro-Frontends-Application
 
 ### 2. Instale as dependências de cada app
 - cd container && npm install
@@ -51,18 +51,21 @@ cd Micro-Frontends-Application
 
 3. Inicie os projetos em terminais separados
 # Terminal 1
-cd container
-npm start
+    ```bash
+    cd container
+    npm start
 # Acessível em: http://localhost:8080
 
 # Terminal 2
-cd remote1
-npm start
+    ```bash
+    cd remote1
+    npm start
 # Acessível em: http://localhost:8081
 
 # Terminal 3
-cd remote2
-npm start
+    ```bash
+    cd remote2
+    npm start
 # Acessível em: http://localhost:8082
 
 🧭 Arquitetura & Considerações
@@ -83,7 +86,7 @@ Este projeto foi inspirado em estudos sobre micro-frontends modernos. É altamen
 - Guia prático com React
 - Micro-frontends com Webpack 5
 
-👨‍💻 Autor
-Desenvolvido por Marcelo Novello
+👨‍💻 Autor:<br>
+Desenvolvido por Marcelo Novello<br>
 [GitHub](https://github.com/marcelonovello) •
 [LinkedIn](https://linkedin.com/in/marcelonovello)
