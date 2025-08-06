@@ -45,9 +45,9 @@ git clone https://github.com/marcelonovello/Micro-Frontends-Application.git
 cd Micro-Frontends-Application
 
 ### 2. Instale as dependências de cada app
-cd container && npm install
-cd ../remote1 && npm install
-cd ../remote2 && npm install
+- cd container && npm install
+- cd ../remote1 && npm install
+- cd ../remote2 && npm install
 
 3. Inicie os projetos em terminais separados
 # Terminal 1
@@ -78,15 +78,12 @@ Ideal para grandes projetos que demandam autonomia por domínio de negócio.
 
 📚 Base Teórica e Aprendizado
 Este projeto foi inspirado em estudos sobre micro-frontends modernos. É altamente recomendável o estudo de:
-
-Micro Frontends – Martin Fowler
-
-Webpack Module Federation Docs
-
-Guia prático com React
-
-Micro-frontends com Webpack 5
+- Micro Frontends – Martin Fowler
+- Webpack Module Federation Docs
+- Guia prático com React
+- Micro-frontends com Webpack 5
 
 👨‍💻 Autor
 Desenvolvido por Marcelo Novello
-GitHub • LinkedIn
+[GitHub](https://github.com/marcelonovello) •
+[LinkedIn](https://linkedin.com/in/marcelonovello)
