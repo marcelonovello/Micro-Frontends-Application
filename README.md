@@ -1,15 +1,11 @@
 # Micro Frontends Application
 
-Arquitetura modular com Container e Remotes usando **Webpack Module Federation** para simular um ambiente escalável e independente entre equipes de front-end.
-
----
-
-## 📋 Pré-requisitos
+## 📋 Pré-requisitos:
 - Node.js v16+
 - Yarn/npm 
 - Git
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas:
 
 - **Container/Host App:** React.js, Webpack Module Federation
 - **Remote Apps:** React.js (podem ser substituídas por Angular, Vue, etc.)
@@ -18,16 +14,13 @@ Arquitetura modular com Container e Remotes usando **Webpack Module Federation**
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Arquitetura
 Micro-Frontends-Application/<br>
-├── container/ # Aplicação principal (Shell)<br>
+├── container/ <br>
 ├── remote1/ # Primeiro micro frontend remoto<br>
 ├── remote2/ # Segundo micro frontend remoto<br>
-├── shared/ # (Opcional) Componentes ou bibliotecas compartilhadas<br>
+├── shared/ # Componentes ou bibliotecas compartilhadas<br>
 └── README.md<br>
-
-
----
 
 ## 🛠️ Funcionalidades Implementadas
 
@@ -37,9 +30,8 @@ Micro-Frontends-Application/<br>
 - Isolamento completo de código entre remotes
 - Rotas independentes para cada microfrontend
 
----
 
-## ⚙️ Como Executar o Projeto
+## ⚙️ Como Executar o Projeto:
 
 > Execute os serviços **em paralelo**, pois cada um roda isoladamente em sua própria porta.
 
@@ -56,8 +48,8 @@ cd Micro-Frontends-Application
    cd ../remote1 && npm install
    cd ../remote2 && npm install
 ```
-### 3. Inicie os projetos em terminais separados
-## Terminal 1
+### 3. Inicie os projetos em terminais separados:
+## Terminal 1:
 
    ```bash
     cd container
@@ -65,7 +57,7 @@ cd Micro-Frontends-Application
    ```
 ### Acessível em: http://localhost:8080
 
-## Terminal 2
+## Terminal 2:
 
    ```bash
     cd remote1
@@ -73,7 +65,7 @@ cd Micro-Frontends-Application
    ```
 ### Acessível em: http://localhost:8081
 
-## Terminal 3
+## Terminal 3:
 
    ```bash
     cd remote2
