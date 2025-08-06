@@ -1,61 +1,92 @@
-# Micro-Frontends Application
+# Micro Frontends Application
 
-## Instruções para Compilar, Testar e Rodar o Projeto
+Arquitetura modular com Container e Remotes usando **Webpack Module Federation** para simular um ambiente escalável e independente entre equipes de front-end.
 
-### Pré-requisitos
+---
 
-- Docker
-- Docker Compose
-- Node.js (para desenvolvimento local)
+## 🚀 Tecnologias Utilizadas
 
-### Passos para Rodar o Projeto com Docker
+- **Container/Host App:** React.js, Webpack Module Federation
+- **Remote Apps:** React.js (podem ser substituídas por Angular, Vue, etc.)
+- **Gerenciamento de Dependências:** Yarn ou npm
+- **Ferramentas:** Git, VS Code, Docker (opcional)
 
-1. Clone o repositório:
-    ```sh
-    git clone https://github.com/seu-usuario/micro-frontends.git
-    cd micro-frontends
-    ```
+---
 
-2. Suba os containers Docker:
-    ```sh
-    docker-compose up --build
-    ```
+## 📁 Estrutura do Projeto
+Micro-Frontends-Application/
+├── container/ # Aplicação principal (Shell)
+├── remote1/ # Primeiro micro frontend remoto
+├── remote2/ # Segundo micro frontend remoto
+├── shared/ # (Opcional) Componentes ou bibliotecas compartilhadas
+└── README.md
 
-3. Acesse as aplicações:
-    - MF Drawer: `http://localhost:8080`
-    - MF Videos: `http://localhost:8081`
-    - BFF: `http://localhost:3000`
 
-### Rodar Testes Unitários
+---
 
-1. Entre no container do BFF:
-    ```sh
-    docker exec -it <container_id> sh
-    ```
+## 🛠️ Funcionalidades Implementadas
 
-2. Execute os testes:
-    ```sh
-    npm test
-    ```
+- Integração entre múltiplas aplicações front-end de forma independente
+- Uso de **Webpack Module Federation** para carregamento remoto dinâmico
+- Compartilhamento de dependências entre projetos (ex: React)
+- Isolamento completo de código entre remotes
+- Rotas independentes para cada microfrontend
 
-### Desenvolvimento Local
+---
 
-1. Instale as dependências do BFF:
-    ```sh
-    cd bff
-    npm install
-    ```
+## ⚙️ Como Executar o Projeto
 
-2. Execute o BFF:
-    ```sh
-    npm start
-    ```
+> Execute os serviços **em paralelo**, pois cada um roda isoladamente em sua própria porta.
 
-3. Acesse as aplicações localmente:
-    - Abra `mf_drawer/index.html` no seu navegador.
-    - Abra `mf_videos/index.html` no seu navegador.
-    - Abra `mf_drawer/favorite.html` no seu navegador.
+### 1. Clone o repositório
 
-### Conclusão
+    ```bash
+git clone https://github.com/marcelonovello/Micro-Frontends-Application.git
+cd Micro-Frontends-Application
 
-Esta estrutura de projeto inclui duas aplicações micro-frontend que se comunicam com um BFF, utilizando a API do YouTube para buscar vídeos e com suporte a navegação por rotas e testes unitários. Certifique-se de substituir `"YOUR_YOUTUBE_API_KEY"` pela sua chave de API do YouTube antes de rodar os testes.
+### 2. Instale as dependências de cada app
+cd container && npm install
+cd ../remote1 && npm install
+cd ../remote2 && npm install
+
+3. Inicie os projetos em terminais separados
+# Terminal 1
+cd container
+npm start
+# Acessível em: http://localhost:8080
+
+# Terminal 2
+cd remote1
+npm start
+# Acessível em: http://localhost:8081
+
+# Terminal 3
+cd remote2
+npm start
+# Acessível em: http://localhost:8082
+
+🧭 Arquitetura & Considerações
+A abordagem de micro-frontends traz os benefícios da arquitetura de microsserviços para o front-end:
+
+✅ Permite escalar projetos com equipes independentes
+✅ Cada parte da aplicação pode evoluir separadamente
+✅ Reutilização de bibliotecas e componentes comuns
+⚠️ Requer controle rigoroso de dependências compartilhadas
+⚠️ Requer planejamento de roteamento, estados e autenticação
+
+Ideal para grandes projetos que demandam autonomia por domínio de negócio.
+
+📚 Base Teórica e Aprendizado
+Este projeto foi inspirado em estudos sobre micro-frontends modernos. É altamente recomendável o estudo de:
+
+Micro Frontends – Martin Fowler
+
+Webpack Module Federation Docs
+
+Guia prático com React
+
+Micro-frontends com Webpack 5
+
+👨‍💻 Autor
+Desenvolvido por Marcelo Novello
+GitHub • LinkedIn
