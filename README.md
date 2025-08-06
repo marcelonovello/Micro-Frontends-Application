@@ -40,7 +40,7 @@ Micro-Frontends-Application/
 
 ### 1. Clone o repositório
 
-    ```bash
+   ```bash
     git clone https://github.com/marcelonovello/Micro-Frontends-Application.git
     cd Micro-Frontends-Application
 
@@ -51,7 +51,8 @@ Micro-Frontends-Application/
 
 3. Inicie os projetos em terminais separados
 # Terminal 1
-    ```bash
+
+   ```bash
     cd container
     npm start
 # Acessível em: http://localhost:8080
