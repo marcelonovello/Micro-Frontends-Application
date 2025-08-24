@@ -1,0 +1,3 @@
+[submodule "Micro-Frontends-Application"]
+	path = Micro-Frontends-Application
+	url = https://github.com/marcelonovello/Micro-Frontends-Application
