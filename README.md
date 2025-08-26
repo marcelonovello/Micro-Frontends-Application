@@ -1,98 +1,470 @@
-# Micro Frontends Application
+<div align="left" style="position: relative;">
+<img src="/home/ubuntu/logo_option_2.png" align="right" width="30%" style="margin: -20px 0 0 20px;">
+<h1>MICRO-FRONTENDS-APPLICATION</h1>
+<p align="left">
+	<em><code>❯ A modular micro-frontends architecture for browsing, searching, and favoriting YouTube videos, built with Webpack Module Federation, Docker, and modern web technologies.</code></em>
+</p>
+<p align="left">Built with the tools and technologies:</p>
+<p align="left">
+	<a href="https://skillicons.dev">
+		<img src="https://skillicons.dev/icons?i=css,docker,html,md&theme=light">
+	</a>
+</p>
+</div>
+<br clear="right">
 
-## 📋 Pré-requisitos:
-- Node.js v16+
-- Yarn/npm
-- Git
+<details><summary>Table of Contents</summary>
 
-## 🚀 Tecnologias Utilizadas:
+- [ Overview](#-overview)
+- [ Features](#-features)
+- [ Project Structure](#-project-structure)
+  - [ Project Index](#-project-index)
+- [ Getting Started](#-getting-started)
+  - [ Prerequisites](#-prerequisites)
+  - [ Installation](#-installation)
+  - [ Usage](#-usage)
+  - [ Testing](#-testing)
+- [ Project Roadmap](#-project-roadmap)
+- [ Contributing](#-contributing)
+- [ License](#-license)
+- [ Acknowledgments](#-acknowledgments)
 
-- **Container (mf_drawer):** React.js, Webpack Module Federation
-- **Remote App (mf_video):** React.js (pode ser substituído por Angular, Vue, etc.)
-- **BFF (Backend for Frontend):** Node.js/Express
-- **Gerenciamento de Dependências:** Yarn ou npm
-- **Ferramentas:** Git, VS Code, Docker (opcional)
+</details>
+<hr>
 
----
+## Overview
 
-## 📁 Arquitetura
-Micro-Frontends-Application/<br>
-├── mf_drawer/ # Aplicação container (host) <br>
-├── mf_video/ # Micro frontend remoto (vídeo) <br>
-├── bff/ # Backend for Frontend (API) <br>
-└── README.md<br>
+This project implements a **micro-frontends YouTube interface** using **Webpack Module Federation**.  
+It allows users to:
+- Browse and search YouTube videos via the YouTube Data API.
+- View detailed video information.
+- Favorite videos for quick access.
+- Run in isolated modules for scalability and independent deployment.
 
-## 🛠️ Funcionalidades Implementadas
-
-- Integração entre múltiplas aplicações front-end de forma independente
-- Uso de **Webpack Module Federation** para carregamento remoto dinâmico
-- Compartilhamento de dependências entre projetos (ex: React)
-- Isolamento completo de código entre remotes
-- Rotas independentes para cada microfrontend
-- Backend intermediário para orquestração e comunicação com APIs
-
-## ⚙️ Como Executar o Projeto Localmente:
-
-> Execute os serviços **em paralelo**, pois cada um roda isoladamente em sua própria porta.
-
-### 1. Clone o repositório:
-
-```bash
-git clone https://github.com/marcelonovello/Micro-Frontends-Application.git
-cd Micro-Frontends-Application
-```
-
-### 2. Instale as dependências de cada app:
-
-```bash
-cd mf_drawer && npm install
-cd ../mf_video && npm install
-cd ../bff && npm install
-```
-
-### 3. Inicie os projetos em terminais separados:
-
-#### Terminal 1 — BFF (Backend for Frontend):
-```bash
-cd bff
-npm start
-```
-Acessível em: http://localhost:3000
-
-#### Terminal 2 — mf_video (Remote):
-```bash
-cd mf_video
-npm start
-```
-Acessível em: http://localhost:8081
-
-#### Terminal 3 — mf_drawer (Container):
-```bash
-cd mf_drawer
-npm start
-```
-Acessível em: http://localhost:8080
+The application is containerized with **Docker** and orchestrated using **docker-compose**, allowing smooth local development and easy production deployment.
 
 ---
 
-## ☁️ Deploy no Netlify
+## Features
 
-O **mf_drawer** e **mf_video** podem ser hospedados no Netlify, enquanto o **bff** deve ser hospedado em um serviço de backend (Heroku, Render, Railway, Vercel Functions ou Netlify Functions).
-
-### Deploy dos micro-frontends no Netlify:
-1. Crie **um site no Netlify para cada app** (`mf_drawer` e `mf_video`).
-2. Configure cada um:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist` (ou conforme configuração do bundler)
-3. Após o deploy, substitua as URLs dos remotes no `ModuleFederationPlugin` do `mf_drawer` para apontar para as URLs públicas do Netlify.
-
-### Deploy do BFF:
-- Utilize plataformas como **Render**, **Railway**, **Heroku** ou **Vercel Functions**.
-- Atualize o frontend (`mf_drawer` e `mf_video`) para consumir a URL do BFF no ambiente de produção.
-
-> **Importante:** O Netlify não mantém `npm start` em produção, é necessário rodar `npm run build` e servir os arquivos estáticos.
+- **Micro-Frontends Architecture** – Modular structure with independent builds and deployments.
+- **YouTube API Integration** – Search, browse, and retrieve detailed video data.
+- **Favorites System** – Save and manage your favorite videos locally.
+- **Dockerized Development** – Fully containerized for reproducibility.
+- **Hot Reloading** – Instant feedback during development.
+- **Scalable Design** – Modules can be extended or replaced without affecting the whole app.
 
 ---
 
-### 👨‍💻 Autor:
-Desenvolvido por Marcelo Novello<br>
+## Project Structure
+
+```sh
+└── Micro-Frontends-Application/
+    ├── README.md
+    ├── bff
+    │   ├── Dockerfile
+    │   ├── __test__
+    │   ├── babel.config.js
+    │   ├── jest.config.js
+    │   ├── jest.setup.js
+    │   ├── package-lock.json
+    │   ├── package.json
+    │   ├── public
+    │   └── server.js
+    ├── docker-compose.yml
+    ├── mf_drawer
+    │   ├── .env.production
+    │   ├── Dockerfile
+    │   ├── babel.config.js
+    │   ├── favorite.html
+    │   ├── index.html
+    │   ├── jest.config.js
+    │   ├── jest.setup.js
+    │   ├── package-lock.json
+    │   ├── package.json
+    │   ├── script.js
+    │   ├── style.css
+    │   └── test
+    ├── mf_video
+    │   ├── Dockerfile
+    │   ├── __tests__
+    │   ├── babel.config.js
+    │   ├── dist
+    │   ├── index.html
+    │   ├── jest.config.mjs
+    │   ├── jest.setup.js
+    │   ├── package-lock.json
+    │   ├── package.json
+    │   ├── script.js
+    │   ├── style.css
+    │   ├── webpack.config.js
+    │   └── {
+    └── package-lock.json
+
+```
+
+
+##  Project Index
+
+<details open>
+	<summary><b><code>MICRO-FRONTENDS-APPLICATION/</code></b></summary>
+	<details> <!-- __root__ Submodule -->
+		<summary><b>__root__</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/package-lock.json\'>package-lock.json</a></b></td>
+				<td>❯ Automatically generated by npm to record exact dependency versions, ensuring consistent builds across different environments.`</td></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/docker-compose.yml\'>docker-compose.yml</a></b></td>
+				<td><code>❯ Defines multi-container Docker applications, allowing services to be configured and run together.</code></td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- mf_drawer Submodule -->
+		<summary><b>mf_drawer</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/style.css\'>style.css</a></b></td>
+				<td><code>❯ Main stylesheet file defining the visual presentation and layout of the web application.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/package-lock.json\'>package-lock.json</a></b></td>
+				<td><code>❯ Automatically generated by npm to record exact dependency versions, ensuring consistent builds across different environments.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/favorite.html\'>favorite.html</a></b></td>
+				<td><code>❯ HTML page specifically for favorite items or bookmarked content within the application</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/jest.setup.js\'>jest.setup.js</a></b></td>
+				<td><code>❯ Jest setup file that runs before tests, configuring test environment and global setup.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/script.js\'>script.js</a></b></td>
+				<td><code>❯ Main JavaScript file containing application logic, event handlers, and functionality.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/babel.config.js\'>babel.config.js</a></b></td>
+				<td><code>❯ Babel configuration file for transforming modern JavaScript code for browser compatibility.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/package.json\'>package.json</a></b></td>
+				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/.env.production\'>.env.production</a></b></td>
+				<td><code>❯ Environment variables file for production configuration, containing sensitive data and production-specific settings.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/index.html\'>index.html</a></b></td>
+				<td><code>❯ Main HTML entry point for the web application, containing the base structure and content.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/jest.config.js\'>jest.config.js</a></b></td>
+				<td><code>❯ Configuration file for Jest testing framework, specifying test settings and patterns.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/Dockerfile\'>Dockerfile</a></b></td>
+				<td><code>❯ Contains instructions for building a Docker image for the application, specifying the environment and dependencies.</code></td>
+			</tr>
+			</table>
+			<details>
+				<summary><b>test</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/test/test.script.js\'>test.script.js</a></b></td>
+						<td><code>❯ Test file containing unit tests for the main application logic in script.js.</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+		</blockquote>
+	</details>
+	<details> <!-- bff Submodule -->
+		<summary><b>bff</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/package-lock.json\'>package-lock.json</a></b></td>
+				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/jest.setup.js\'>jest.setup.js</a></b></td>
+				<td><code>❯ Jest setup file that runs before tests, configuring test environment and global setup.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/babel.config.js\'>babel.config.js</a></b></td>
+				<td><code>❯ Babel configuration file for transforming modern JavaScript code for browser compatibility.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/package.json\'>package.json</a></b></td>
+				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/server.js\'>server.js</a></b></td>
+				<td><code>❯ Main server file that sets up and configures the application's backend server and API endpoints.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/jest.config.js\'>jest.config.js</a></b></td>
+				<td><code>❯ Configuration file for Jest testing framework, specifying test settings and patterns.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/Dockerfile\'>Dockerfile</a></b></td>
+				<td><code>❯ Contains instructions for building a Docker image for the application, specifying the environment and dependencies.</code></td>
+			</tr>
+			</table>
+			<details>
+				<summary><b>__test__</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/__test__/videos.test.js\'>videos.test.js</a></b></td>
+						<td><code>❯ Test file specifically for video-related functionality and components.</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+			<details>
+				<summary><b>public</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/style.css\'>style.css</a></b></td>
+						<td><code>❯ Main stylesheet file defining the visual presentation and layout of the web application.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/favorite.html\'>favorite.html</a></b></td>
+				<td><code>❯ HTML page specifically for favorite items or bookmarked content within the application.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/script.js\'>script.js</a></b></td>
+				<td><code>❯ Main JavaScript file containing application logic, event handlers, and functionality.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/index.html\'>index.html</a></b></td>
+				<td><code>❯ Main HTML entry point for the web application, containing the base structure and content.</code></td>
+			</tr>
+			</table>
+				</blockquote>
+			</details>
+		</blockquote>
+	</details>
+	<details> <!-- mf_video Submodule -->
+		<summary><b>mf_video</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/style.css\'>style.css</a></b></td>
+				<td><code>❯ Main stylesheet file defining the visual presentation and layout of the web application.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/jest.config.mjs\'>jest.config.mjs</a></b></td>
+				<td><code>❯ ES module version of Jest configuration for modern JavaScript module systems.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/package-lock.json\'>package-lock.json</a></b></td>
+				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/{\''>{</a></b></td>
+				<td><code>❯ Opening brace file containing structured data or object definitions.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/jest.setup.js\'>jest.setup.js</a></b></td>
+				<td><code>❯ Jest setup file that runs before tests, configuring test environment and global setup.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/script.js\'>script.js</a></b></td>
+				<td><code>❯ Main JavaScript file containing application logic, event handlers, and functionality.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/babel.config.js\'>babel.config.js</a></b></td>
+				<td><code>❯ Babel configuration file for transforming modern JavaScript code for browser compatibility.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/package.json\'>package.json</a></b></td>
+				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/index.html\'>index.html</a></b></td>
+				<td><code>❯ Main HTML entry point for the web application, containing the base structure and content.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/webpack.config.js\'>webpack.config.js</a></b></td>
+				<td><code>❯ Configuration file for Webpack, defining how modules are bundled and processed for production.</code></td>
+			</tr>
+			<tr>
+				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/Dockerfile\'>Dockerfile</a></b></td>
+				<td><code>❯ Contains instructions for building a Docker image for the application, specifying the environment and dependencies.</code></td>
+			</tr>
+			</table>
+			<details>
+				<summary><b>__tests__</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/__tests__/script.test.js\'>script.test.js</a></b></td>
+						<td><code>❯ Test file containing unit tests for the main application logic in script.js.</code></td>
+					</tr>
+					</table>
+				</blockquote>
+			</details>
+		</blockquote>
+	</details>
+</details>
+
+---
+##  Getting Started
+
+###  Prerequisites
+
+Before getting started with Micro-Frontends-Application, ensure your runtime environment meets the following requirements:
+
+- **Programming Language:** JavaScript
+- **Package Manager:** Npm
+- **Container Runtime:** Docker
+
+
+###  Installation
+
+Install Micro-Frontends-Application using one of the following methods:
+
+**Build from source:**
+
+1. Clone the Micro-Frontends-Application repository:
+```sh
+❯ git clone https://github.com/marcelonovello/Micro-Frontends-Application
+```
+
+2. Navigate to the project directory:
+```sh
+❯ cd Micro-Frontends-Application
+```
+
+3. Install the project dependencies:
+
+
+**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ npm install
+```
+
+
+**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+
+```sh
+❯ docker build -t marcelonovello/Micro-Frontends-Application .
+```
+
+
+
+
+###  Usage
+Run Micro-Frontends-Application using the following command:
+**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ npm start
+```
+
+
+**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+
+```sh
+❯ docker run -it {image_name}
+```
+
+
+###  Testing
+Run the test suite using the following command:
+**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ npm test
+```
+
+
+---
+## Project Roadmap
+
+- [X] **`Init`**: Initialize project structure and create micro-frontend modules (`mf_video`, `mf_drawer`).
+- [X] **`Config`**: Set up core tooling (Webpack, Babel, Jest) and configuration files.
+- [X] **`Container`**: Develop the main application shell (`index.html`, `script.js`).
+- [ ] **`MF Video`**: Build and style the core video player component with playback controls.
+- [ ] **`MF Drawer`**: Develop the navigation drawer component and integrate the favorites feature.
+- [ ] **`Comms`**: Establish a communication pattern between micro-frontends and the container.
+- [ ] **`Integrate`**: Use Webpack Module Federation to dynamically load micro-frontends.
+- [ ] **`Deploy`**: Finalize Docker containerization and multi-environment configuration.
+- [ ] **`Optimize`**: Analyze and optimize bundle sizes, implement lazy loading.
+- [ ] **`Test`**: Write integration and E2E tests; establish a CI/CD pipeline.
+- [ ] **`Expand`**: Add new micro-frontends (e.g., user profile, comments).
+- [ ] **`Improve`**: Enhance developer experience and documentation.
+
+---
+
+##  Contributing
+
+- **💬 [Join the Discussions](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Submit bugs found or log feature requests for the `Micro-Frontends-Application` project.
+- **💡 [Submit Pull Requests](https://github.com/marcelonovello/Micro-Frontends-Application/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+
+<details closed>
+<summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the repository to your github account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone https://github.com/marcelonovello/Micro-Frontends-Application
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m \'Implemented new feature x.\'
+   ```
+6. **Push to github**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
+
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="left">
+   <a href="https://github.com{/marcelonovello/Micro-Frontends-Application/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=marcelonovello/Micro-Frontends-Application">
+   </a>
+</p>
+</details>
+
+---
+
+##  License
+
+This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+
+---
+
+## Acknowledgments
+
+*   **Micro-Frontends Architecture**: Inspired by modern web development practices for building scalable and independently deployable frontend applications.
+*   **Webpack Module Federation**: For enabling the runtime integration of separately built micro-frontends.
+*   **Jest Testing Framework**: For providing a comprehensive and developer-friendly testing platform.
+*   **Docker & Docker Compose**: For simplifying containerization and multi-service orchestration, ensuring consistent environments from development to production.
+*   **Babel**: For ensuring JavaScript code compatibility across different browser environments.
+*   **The Open Source Community**: For the countless libraries and tools that make modern web development possible.
+
+---
+
