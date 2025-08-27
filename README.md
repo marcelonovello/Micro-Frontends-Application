@@ -355,14 +355,14 @@ Install Micro-Frontends-Application using one of the following methods:
 3. Install the project dependencies:
 
 
-**Using** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+**Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 ❯ npm install
 ```
 
 
-**Using** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+**Using:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
 ❯ docker build -t marcelonovello/Micro-Frontends-Application .
@@ -371,14 +371,14 @@ Install Micro-Frontends-Application using one of the following methods:
 
 ### 🚀 Usage
 Run Micro-Frontends-Application using the following command:<br>
-**Using** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+**Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 ❯ npm start
 ```
 
 
-**Using** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+**Using:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
 ❯ docker run -it {image_name}
@@ -386,8 +386,8 @@ Run Micro-Frontends-Application using the following command:<br>
 
 
 ### 🧪 Testing
-Run the test suite using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+Run the test suite using the following command:<br>
+**Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 ❯ npm test
@@ -458,9 +458,9 @@ Run the test suite using the following command:
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full details.
 
 ---
 
