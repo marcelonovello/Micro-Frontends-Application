@@ -452,9 +452,9 @@ Execute os testes usando o seguinte comando:<br>
 
 ---
 
-## 📜 Licença
+## 📄 Licença
 
-Este projeto está protegido sob a licença [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. Para mais detalhes, consulte o arquivo [LICENSE](https://choosealicense.com/licenses/).
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
