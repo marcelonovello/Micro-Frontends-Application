@@ -415,7 +415,7 @@ Execute os testes usando o seguinte comando:<br>
 ## 👥 Contribuindo
 
 - **💬 [Participe das Discussões](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Compartilhe suas ideias, forneça feedback ou faça perguntas.
-- **🐛 [Report Issues](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Envie bugs encontrados ou registre solicitações de novas funcionalidades para o projeto `Micro-Frontends-Application`.
+- **🐛 [Reportar Problemas](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Envie bugs encontrados ou registre solicitações de novas funcionalidades para o projeto `Micro-Frontends-Application`.
 - **💡 [Submeta Pull Requests](https://github.com/marcelonovello/Micro-Frontends-Application/blob/main/CONTRIBUTING.md)**: Analise PRs abertos e envie seus próprios PRs.
 
 <details closed>
