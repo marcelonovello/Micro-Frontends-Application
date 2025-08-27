@@ -1,3 +1,6 @@
+[🇺🇸 English](./README.md)   |   [🇧🇷 Português](./README-pt.md)
+
+<br>
 <h1 align="center">🧩 MICRO-FRONTENDS-APPLICATION</h1>
 <p align="center">
 	A modular micro-frontends architecture for browsing, searching, and favoriting YouTube videos, built with Webpack Module Federation, Docker, and modern web technologies.
