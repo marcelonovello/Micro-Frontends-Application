@@ -368,7 +368,7 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 
 
 ### 🚀 Uso
-Run Micro-Frontends-Application using the following command:<br>
+Execute o Micro-Frontends-Application usando o seguinte comando:<br>
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
@@ -384,7 +384,7 @@ Run Micro-Frontends-Application using the following command:<br>
 
 
 ### 🧪 Testes
-Run the test suite using the following command:<br>
+Execute os testes usando o seguinte comando::<br>
 **Usando** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
@@ -420,32 +420,32 @@ Run the test suite using the following command:<br>
 - **💡 [Submeta Pull Requests](https://github.com/marcelonovello/Micro-Frontends-Application/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
 
 <details closed>
-<summary>Contributing Guidelines</summary>
+<summary>Diretrizes para Contribuição</summary>
 
-1. **Fork the Repository**: Start by forking the repository to your github account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+1. **Fork do Repositório**: Comece fazendo um fork do repositório para sua conta no GitHub.
+2. **Clone Localmente**: Clone o repositório forked para sua máquina usando um cliente git.
    ```sh
    git clone https://github.com/marcelonovello/Micro-Frontends-Application
    ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+3. **Crie uma Nova Branch**: Sempre trabalhe em uma nova branch, dando um nome descritivo.
    ```sh
    git checkout -b new-feature-x
    ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
+4. **Faça Suas Alterações**: Desenvolva e teste suas alterações localmente.
+5. **Commit das Alterações**: Faça commit com uma mensagem clara descrevendo suas atualizações.
    ```sh
    git commit -m \'Implemented new feature x.\'
    ```
-6. **Push to github**: Push the changes to your forked repository.
+6. **Push para o github**: Envie as alterações para seu repositório forked.
    ```sh
    git push origin new-feature-x
    ```
-7. **Submit a Pull Request**: Create a PR against the original repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+7. **Submeta um Pull Request**: Crie um PR contra o repositório original. Descreva claramente as mudanças e suas motivações.
+8. **Revisão**: Uma vez que o PR seja revisado e aprovado, ele será mergeado na branch principal. Parabéns pela contribuição!
 </details>
 
 <details closed>
-<summary>Contributor Graph</summary>
+<summary>Gráfico de Contribuidores</summary>
 <br>
 <p align="left">
    <a href="https://github.com{/marcelonovello/Micro-Frontends-Application/}graphs/contributors">
