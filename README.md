@@ -1,19 +1,37 @@
-<div align="left" style="position: relative;">
-<img src="/home/ubuntu/logo_option_2.png" align="right" width="30%" style="margin: -20px 0 0 20px;">
-<h1>MICRO-FRONTENDS-APPLICATION</h1>
-<p align="left">
-	<em><code>❯ A modular micro-frontends architecture for browsing, searching, and favoriting YouTube videos, built with Webpack Module Federation, Docker, and modern web technologies.</code></em>
+<h1 align="center">🧩 MICRO-FRONTENDS-APPLICATION</h1>
+<p align="center">
+	A modular micro-frontends architecture for browsing, searching, and favoriting YouTube videos, built with Webpack Module Federation, Docker, and modern web technologies.
 </p>
-<p align="left">Built with the tools and technologies:</p>
-<p align="left">
-	<a href="https://skillicons.dev">
-		<img src="https://skillicons.dev/icons?i=css,docker,html,md&theme=light">
-	</a>
+<p align="center">
+  <a href="https://www.docker.com/">
+    <img src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" />
+  </a>
+  <a href="https://www.npmjs.com/">
+    <img src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat" />
+  </a>
 </p>
-</div>
-<br clear="right">
 
-<details><summary>Table of Contents</summary>
+## 🛠 Tech Stack
+<p>
+  <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
+</p></div>
+
+## 🔎 Overview
+
+This project implements a **micro-frontends YouTube interface** using **Webpack Module Federation**.  
+It allows users to:
+- Browse and search YouTube videos via the YouTube Data API.
+- View detailed video information.
+- Favorite videos for quick access.
+- Run in isolated modules for scalability and independent deployment.
+
+The application is containerized with **Docker** and orchestrated using **docker-compose**, allowing smooth local development and easy production deployment.
+
+---
+<details><summary>📑 Table of Contents</summary>
 
 - [ Overview](#-overview)
 - [ Features](#-features)
@@ -30,33 +48,21 @@
 - [ Acknowledgments](#-acknowledgments)
 
 </details>
-<hr>
-
-## Overview
-
-This project implements a **micro-frontends YouTube interface** using **Webpack Module Federation**.  
-It allows users to:
-- Browse and search YouTube videos via the YouTube Data API.
-- View detailed video information.
-- Favorite videos for quick access.
-- Run in isolated modules for scalability and independent deployment.
-
-The application is containerized with **Docker** and orchestrated using **docker-compose**, allowing smooth local development and easy production deployment.
 
 ---
 
-## Features
+## ✨ Features
 
-- **Micro-Frontends Architecture** – Modular structure with independent builds and deployments.
-- **YouTube API Integration** – Search, browse, and retrieve detailed video data.
-- **Favorites System** – Save and manage your favorite videos locally.
-- **Dockerized Development** – Fully containerized for reproducibility.
-- **Hot Reloading** – Instant feedback during development.
-- **Scalable Design** – Modules can be extended or replaced without affecting the whole app.
+- ⚡ **Micro-Frontends Architecture** – Modular structure with independent builds and deployments.
+- 🔎 **YouTube API Integration** – Search, browse, and retrieve detailed video data.
+- ⭐ **Favorites System** – Save and manage your favorite videos locally.
+- 🐳 **Dockerized Development** – Fully containerized for reproducibility.
+- ⏳ **Hot Reloading** – Instant feedback during development.
+- 📦 **Scalable Design** – Modules can be extended or replaced without affecting the whole app.
 
 ---
 
-## Project Structure
+## 🏗 Project Structure
 
 ```sh
 └── Micro-Frontends-Application/
@@ -104,7 +110,7 @@ The application is containerized with **Docker** and orchestrated using **docker
 ```
 
 
-##  Project Index
+## 📂 Project Index
 
 <details open>
 	<summary><b><code>MICRO-FRONTENDS-APPLICATION/</code></b></summary>
@@ -319,9 +325,9 @@ The application is containerized with **Docker** and orchestrated using **docker
 </details>
 
 ---
-##  Getting Started
+## ⚡ Getting Started
 
-###  Prerequisites
+### 🛠 Prerequisites
 
 Before getting started with Micro-Frontends-Application, ensure your runtime environment meets the following requirements:
 
@@ -330,7 +336,7 @@ Before getting started with Micro-Frontends-Application, ensure your runtime env
 - **Container Runtime:** Docker
 
 
-###  Installation
+##  ⚙️ Installation
 
 Install Micro-Frontends-Application using one of the following methods:
 
@@ -349,39 +355,37 @@ Install Micro-Frontends-Application using one of the following methods:
 3. Install the project dependencies:
 
 
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+**Using** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 ❯ npm install
 ```
 
 
-**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+**Using** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
 ❯ docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
 
-
-
-###  Usage
-Run Micro-Frontends-Application using the following command:
-**Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+### 🚀 Usage
+Run Micro-Frontends-Application using the following command:<br>
+**Using** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
 ❯ npm start
 ```
 
 
-**Using `docker`** &nbsp; [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
+**Using** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
 ❯ docker run -it {image_name}
 ```
 
 
-###  Testing
+### 🧪 Testing
 Run the test suite using the following command:
 **Using `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
@@ -389,9 +393,12 @@ Run the test suite using the following command:
 ❯ npm test
 ```
 
+## 🛠 Troubleshooting
+- If ports are already in use → change PORT in .env or docker-compose.yml
+- If YouTube API fails → verify your YOUTUBE_API_KEY is correct and enabled
 
 ---
-## Project Roadmap
+## 🗺 Project Roadmap
 
 - [X] **`Init`**: Initialize project structure and create micro-frontend modules (`mf_video`, `mf_drawer`).
 - [X] **`Config`**: Set up core tooling (Webpack, Babel, Jest) and configuration files.
@@ -408,7 +415,7 @@ Run the test suite using the following command:
 
 ---
 
-##  Contributing
+## 👥 Contributing
 
 - **💬 [Join the Discussions](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Share your insights, provide feedback, or ask questions.
 - **🐛 [Report Issues](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Submit bugs found or log feature requests for the `Micro-Frontends-Application` project.
@@ -451,13 +458,13 @@ Run the test suite using the following command:
 
 ---
 
-##  License
+## 📜 License
 
 This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
 
-## Acknowledgments
+## 📚 Acknowledgments
 
 *   **Micro-Frontends Architecture**: Inspired by modern web development practices for building scalable and independently deployable frontend applications.
 *   **Webpack Module Federation**: For enabling the runtime integration of separately built micro-frontends.
