@@ -36,6 +36,7 @@ A aplicação é containerizada com **Docker** e orquestrada usando **docker-com
 ---
 <details><summary>📑 Sumário</summary>
 
+- [ Tecnologias](#-tecnologias)
 - [ Visão Geral](#-visão-geral)
 - [ Funcionalidades](#-funcionalidades)
 - [ Estrutura do Projeto](#-estrutura-do-projeto)
