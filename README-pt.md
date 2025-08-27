@@ -342,7 +342,7 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 
 **Build a partir do código-fonte:**
 
-1. Clone the Micro-Frontends-Application repository:
+1. Clone o repositório:
 ```sh
 ❯ git clone https://github.com/marcelonovello/Micro-Frontends-Application
 ```
@@ -355,13 +355,11 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 3. Instale as dependências:
 
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
 ```sh
 ❯ npm install
 ```
 
 **Usando:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
-
 ```sh
 ❯ docker build -t marcelonovello/Micro-Frontends-Application .
 ```
@@ -369,24 +367,22 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 
 ### 🚀 Uso
 Execute o Micro-Frontends-Application usando o seguinte comando:<br>
-**Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
+**Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
 ❯ npm start
 ```
 
-
 **Usando:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
-
 ```sh
 ❯ docker run -it {image_name}
 ```
 
 
 ### 🧪 Testes
-Execute os testes usando o seguinte comando::<br>
-**Usando** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+Execute os testes usando o seguinte comando:<br>
 
+**Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
 ❯ npm test
 ```
@@ -415,9 +411,9 @@ Execute os testes usando o seguinte comando::<br>
 
 ## 👥 Contribuindo
 
-- **💬 [Participe das Discussões](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Submit bugs found or log feature requests for the `Micro-Frontends-Application` project.
-- **💡 [Submeta Pull Requests](https://github.com/marcelonovello/Micro-Frontends-Application/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **💬 [Participe das Discussões](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Compartilhe suas ideias, forneça feedback ou faça perguntas.
+- **🐛 [Report Issues](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Envie bugs encontrados ou registre solicitações de novas funcionalidades para o projeto `Micro-Frontends-Application`.
+- **💡 [Submeta Pull Requests](https://github.com/marcelonovello/Micro-Frontends-Application/blob/main/CONTRIBUTING.md)**: Analise PRs abertos e envie seus próprios PRs.
 
 <details closed>
 <summary>Diretrizes para Contribuição</summary>
