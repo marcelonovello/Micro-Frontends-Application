@@ -45,7 +45,7 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
   - ⚙️ [Installation](#installation)
   - 🚀 [Usage](#usage)
   - 🧪 [Testing](#testing)
-  - 🛠 [Troubleshooting](#troubleshooting)
+  - 🔧 [Troubleshooting](#troubleshooting)
 - 🗺 [Project Roadmap](#project-roadmap)  
 - 👥 [Contributing](#contributing)  
 - 📄 [License](#license)  
@@ -133,12 +133,12 @@ Install Micro-Frontends-Application using one of the following methods:
 
 1. Clone the Micro-Frontends-Application repository:
 ```sh
-❯ git clone https://github.com/marcelonovello/Micro-Frontends-Application
+git clone https://github.com/marcelonovello/Micro-Frontends-Application
 ```
 
 2. Navigate to the project directory:
 ```sh
-❯ cd Micro-Frontends-Application
+cd Micro-Frontends-Application
 ```
 
 3. Install the project dependencies:
@@ -147,14 +147,14 @@ Install Micro-Frontends-Application using one of the following methods:
 **Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
-❯ npm install
+npm install
 ```
 
 
 **Using:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
-❯ docker build -t marcelonovello/Micro-Frontends-Application .
+docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
 
@@ -163,25 +163,23 @@ Run Micro-Frontends-Application using the following command:<br>
 **Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
 ```sh
-❯ npm start
+npm start
 ```
 
 **Using:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ```sh
-❯ docker run -it {image_name}
+docker run -it {image_name}
 ```
 
 
 ### 🧪 Testing
 Run the test suite using the following command:<br>
-**Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
 ```sh
-❯ npm test
+npm test
 ```
 
-## 🛠 Troubleshooting
+## 🔧 Troubleshooting
 - ⚠️ If ports are already in use → change PORT in .env or docker-compose.yml
 - 🐛 If YouTube API fails → verify your YOUTUBE_API_KEY is correct and enabled
 
