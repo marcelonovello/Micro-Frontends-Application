@@ -244,8 +244,6 @@ Run the test suite using the following command:<br>
 </p>
 </details>
 
-[🇺🇸 English](./README.md)   |   [🇧🇷 Português](./README-pt.md)
-
 ---
 
 ## 📄 License
@@ -264,4 +262,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - 🌐 **The Open Source Community:** For the countless libraries and tools that make modern web development possible.  
 
 ---
-
