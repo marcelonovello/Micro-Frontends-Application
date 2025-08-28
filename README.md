@@ -45,7 +45,7 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
   - ⚙️ [Installation](#installation)
   - 🚀 [Usage](#usage)
   - 🧪 [Testing](#testing)
-  - 🔧 [Troubleshooting](#troubleshooting)
+  	- 🔧 [Troubleshooting](#troubleshooting)
 - 🗺 [Project Roadmap](#project-roadmap)  
 - 👥 [Contributing](#contributing)  
 - 📄 [License](#license)  
@@ -158,7 +158,7 @@ docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
 
-### 🚀 Usage
+## 🚀 Usage
 Run Micro-Frontends-Application using the following command:<br>
 **Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
@@ -173,17 +173,18 @@ docker run -it {image_name}
 ```
 
 
-### 🧪 Testing
+## 🧪 Testing
 Run the test suite using the following command:<br>
 ```sh
 npm test
 ```
 
 ## 🔧 Troubleshooting
-- ⚠️ If ports are already in use → change PORT in .env or docker-compose.yml
-- 🐛 If YouTube API fails → verify your YOUTUBE_API_KEY is correct and enabled
+- ⚠️ **If ports are already in use** → change PORT in .env or docker-compose.yml
+- 🐛 **If YouTube API fails** → verify your YOUTUBE_API_KEY is correct and enabled
 
 ---
+
 ## 🗺 Project Roadmap
 
 - [X] **`Init`**: Initialize project structure and create micro-frontend modules (`mf_video`, `mf_drawer`).
