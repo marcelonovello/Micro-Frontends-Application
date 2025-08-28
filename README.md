@@ -256,12 +256,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📚 Acknowledgments
 
-*   **Micro-Frontends Architecture**: Inspired by modern web development practices for building scalable and independently deployable frontend applications.
-*   **Webpack Module Federation**: For enabling the runtime integration of separately built micro-frontends.
-*   **Jest Testing Framework**: For providing a comprehensive and developer-friendly testing platform.
-*   **Docker & Docker Compose**: For simplifying containerization and multi-service orchestration, ensuring consistent environments from development to production.
-*   **Babel**: For ensuring JavaScript code compatibility across different browser environments.
-*   **The Open Source Community**: For the countless libraries and tools that make modern web development possible.
+- 🏗️ **Micro-Frontends Architecture:** Inspired by modern web development practices for building scalable and independently deployable frontend applications.  
+- ⚡ **Webpack Module Federation:** Enables runtime integration of separately built micro-frontends.  
+- 🧪 **Jest Testing Framework:** Provides a comprehensive and developer-friendly testing platform.  
+- 🐳 **Docker & Docker Compose:** Simplifies containerization and multi-service orchestration, ensuring consistent environments from development to production.  
+- 🛠️ **Babel:** Ensures JavaScript code compatibility across different browser environments.  
+- 🌐 **The Open Source Community:** For the countless libraries and tools that make modern web development possible.  
 
 ---
 
