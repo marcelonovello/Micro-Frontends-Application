@@ -45,7 +45,7 @@ Permite que os usuários:
   - ⚙️ [Instalação](#-instalação)
   - 🚀 [Uso](#-uso)
   - 🧪 [Testes](#-testes)
-  - 🔧 [Solução-de-Problemas](#Solução-de-Problemas)
+  	- 🔧 [Resolução de Problemas](#-resolução-de-Problemas)
 - 🗺 [Roteiro do Projeto](#-roteiro-do-projeto)
 - 👥 [Contribuindo](#-contribuindo)
 - 📄 [Licença](#-licença)
@@ -130,26 +130,27 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 
 1. Clone o repositório:
 ```sh
-❯ git clone https://github.com/marcelonovello/Micro-Frontends-Application
+git clone https://github.com/marcelonovello/Micro-Frontends-Application
 ```
 
 2. Navegue até o diretório do projeto:
 ```sh
-❯ cd Micro-Frontends-Application
+cd Micro-Frontends-Application
 ```
 
 3. Instale as dependências:
+
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
-❯ npm install
+npm install
 ```
 **Usando:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 ```sh
-❯ docker build -t marcelonovello/Micro-Frontends-Application .
+docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
 
-### 🚀 Uso
+## 🚀 Uso
 Execute o Micro-Frontends-Application usando o seguinte comando:<br>
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
@@ -161,14 +162,13 @@ Execute o Micro-Frontends-Application usando o seguinte comando:<br>
 ❯ docker run -it {image_name}
 ```
 
-### 🧪 Testes
+## 🧪 Testes
 Execute os testes usando o seguinte comando:<br>
-**Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
 ❯ npm test
 ```
 
-## 🛠️ Resolução de Problemas
+## 🔧 Resolução de Problemas
 
 - ⚠️ **Se as portas já estiverem em uso** → Altere a porta em `.env` ou `docker-compose.yml`.  
 - 🐛 **Se a PokeAPI falhar** → Verifique a URL da API ou se o serviço da API está online.  
