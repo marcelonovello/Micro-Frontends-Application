@@ -17,42 +17,39 @@
   </a>
 </p>
 
+## 🔎 Visão Geral
+
+Este projeto implementa uma **interface de micro-frontends para YouTube** usando **Webpack Module Federation**.  
+Permite que os usuários:
+- 🔍 Navegar e buscar vídeos do YouTube via YouTube Data API.  
+- 🎬 Visualizar informações detalhadas dos vídeos.  
+- ⭐ Favoritar vídeos para acesso rápido.  
+- 🧩 Executar em módulos isolados para escalabilidade e implantação independente.  
+- 🐳 Dockerizado e orquestrado: A aplicação é containerizada com Docker e orquestrada usando docker-compose, permitindo um desenvolvimento local tranquilo e implantação em produção de forma simples.  
+
 ## 🛠 Tecnologias
 <p>
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
 </p></div>
 
-## 🔎 Visão Geral
-
-Este projeto implementa uma **interface de micro-frontends para YouTube** usando **Webpack Module Federation**.  
-Permite que os usuários:
-- Naveguem e busquem vídeos do YouTube via YouTube Data API.
-- Visualizem informações detalhadas dos vídeos.
-- Favoritem vídeos para acesso rápido.
-- Rodem módulos isolados para escalabilidade e deploy independente.
-
-A aplicação é containerizada com **Docker** e orquestrada usando **docker-compose**, permitindo desenvolvimento local fluido e deploy em produção fácil.
-
 ---
-<details><summary>📑 Sumário</summary>
 
-- [ Tecnologias](#-tecnologias)
-- [ Visão Geral](#-visão-geral)
-- [ Funcionalidades](#-funcionalidades)
-- [ Estrutura do Projeto](#-estrutura-do-projeto)
-  - [ Índice do Projeto](#-índice-do-projeto)
-- [ Começando](#-começando)
-  - [ Pré-requisitos](#-pré-requisitos)
-  - [ Instalação](#-instalação)
-  - [ Uso](#-uso)
-  - [ Testes](#-testes)
-- [ Roteiro do Projeto](#-roteiro-do-projeto)
-- [ Contribuindo](#-contribuindo)
-- [ Licença](#-licença)
-- [ Agradecimentos](#-agradecimentos)
+## 📑 Sumário
 
-</details>
-
+- 📖 [Visão Geral](#-visão-geral)
+- 🛠 [Tecnologias](#-tecnologias)
+- ✨ [Funcionalidades](#-funcionalidades)
+- 🏗 [Estrutura do Projeto](#-estrutura-do-projeto)
+- 🚀 [Começando](#-começando)
+  - 🛠 [Pré-requisitos](#-pré-requisitos)
+  - ⚙️ [Instalação](#-instalação)
+  - 🚀 [Uso](#-uso)
+  - 🧪 [Testes](#-testes)
+  - 🔧 [Solução-de-Problemas](#Solução-de-Problemas)
+- 🗺 [Roteiro do Projeto](#-roteiro-do-projeto)
+- 👥 [Contribuindo](#-contribuindo)
+- 📄 [Licença](#-licença)
+- 📚 [Agradecimentos](#-agradecimentos)
 
 ---
 
@@ -70,264 +67,49 @@ A aplicação é containerizada com **Docker** e orquestrada usando **docker-com
 ## 🏗 Estrutura do Projeto
 
 ```sh
-└── Micro-Frontends-Application/
-    ├── README.md
-    ├── bff
-    │   ├── Dockerfile
-    │   ├── __test__
-    │   ├── babel.config.js
-    │   ├── jest.config.js
-    │   ├── jest.setup.js
-    │   ├── package-lock.json
-    │   ├── package.json
-    │   ├── public
-    │   └── server.js
-    ├── docker-compose.yml
-    ├── mf_drawer
-    │   ├── .env.production
-    │   ├── Dockerfile
-    │   ├── babel.config.js
-    │   ├── favorite.html
-    │   ├── index.html
-    │   ├── jest.config.js
-    │   ├── jest.setup.js
-    │   ├── package-lock.json
-    │   ├── package.json
-    │   ├── script.js
-    │   ├── style.css
-    │   └── test
-    ├── mf_video
-    │   ├── Dockerfile
-    │   ├── __tests__
-    │   ├── babel.config.js
-    │   ├── dist
-    │   ├── index.html
-    │   ├── jest.config.mjs
-    │   ├── jest.setup.js
-    │   ├── package-lock.json
-    │   ├── package.json
-    │   ├── script.js
-    │   ├── style.css
-    │   ├── webpack.config.js
-    │   └── {
-    └── package-lock.json
+└── 📦 Micro-Frontends-Application/
+    ├── 📄 README.md
+    ├── 📂 bff/
+    │   ├── 📄 Dockerfile
+    │   ├── 📄 __test__
+    │   ├── 📄 babel.config.js
+    │   ├── 📄 jest.config.js
+    │   ├── 📄 jest.setup.js
+    │   ├── 📄 package-lock.json
+    │   ├── 📄 package.json
+    │   ├── 📄 public
+    │   └── 📄 server.js
+    ├── 📄 docker-compose.yml
+    ├── 📂 mf_drawer/
+    │   ├── 📄 .env.production
+    │   ├── 📄 Dockerfile
+    │   ├── 📄 babel.config.js
+    │   ├── 📄 favorite.html
+    │   ├── 📄 index.html
+    │   ├── 📄 jest.config.js
+    │   ├── 📄 jest.setup.js
+    │   ├── 📄 package-lock.json
+    │   ├── 📄 package.json
+    │   ├── 📄 script.js
+    │   ├── 📄 style.css
+    │   └── 📄 test
+    ├── 📂 mf_video/
+    │   ├── 📄 Dockerfile
+    │   ├── 📄 __tests__
+    │   ├── 📄 babel.config.js
+    │   ├── 📄 dist
+    │   ├── 📄 index.html
+    │   ├── 📄 jest.config.mjs
+    │   ├── 📄 jest.setup.js
+    │   ├── 📄 package-lock.json
+    │   ├── 📄 package.json
+    │   ├── 📄 script.js
+    │   ├── 📄 style.css
+    │   ├── 📄 webpack.config.js
+    │   └── 📄 {
+    └── 📄 package-lock.json
 
 ```
-
-
-## 📂 Índice do Projeto
-
-<details open>
-	<summary><b><code>MICRO-FRONTENDS-APPLICATION/</code></b></summary>
-	<details> <!-- __root__ Submodule -->
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/package-lock.json\'>package-lock.json</a></b></td>
-				<td>❯ Automatically generated by npm to record exact dependency versions, ensuring consistent builds across different environments.`</td></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/docker-compose.yml\'>docker-compose.yml</a></b></td>
-				<td><code>❯ Defines multi-container Docker applications, allowing services to be configured and run together.</code></td>
-			</tr>
-			</table>
-		</blockquote>
-	</details>
-	<details> <!-- mf_drawer Submodule -->
-		<summary><b>mf_drawer</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/style.css\'>style.css</a></b></td>
-				<td><code>❯ Main stylesheet file defining the visual presentation and layout of the web application.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/package-lock.json\'>package-lock.json</a></b></td>
-				<td><code>❯ Automatically generated by npm to record exact dependency versions, ensuring consistent builds across different environments.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/favorite.html\'>favorite.html</a></b></td>
-				<td><code>❯ HTML page specifically for favorite items or bookmarked content within the application</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/jest.setup.js\'>jest.setup.js</a></b></td>
-				<td><code>❯ Jest setup file that runs before tests, configuring test environment and global setup.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/script.js\'>script.js</a></b></td>
-				<td><code>❯ Main JavaScript file containing application logic, event handlers, and functionality.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/babel.config.js\'>babel.config.js</a></b></td>
-				<td><code>❯ Babel configuration file for transforming modern JavaScript code for browser compatibility.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/package.json\'>package.json</a></b></td>
-				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/.env.production\'>.env.production</a></b></td>
-				<td><code>❯ Environment variables file for production configuration, containing sensitive data and production-specific settings.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/index.html\'>index.html</a></b></td>
-				<td><code>❯ Main HTML entry point for the web application, containing the base structure and content.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/jest.config.js\'>jest.config.js</a></b></td>
-				<td><code>❯ Configuration file for Jest testing framework, specifying test settings and patterns.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/Dockerfile\'>Dockerfile</a></b></td>
-				<td><code>❯ Contains instructions for building a Docker image for the application, specifying the environment and dependencies.</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>test</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_drawer/test/test.script.js\'>test.script.js</a></b></td>
-						<td><code>❯ Test file containing unit tests for the main application logic in script.js.</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- bff Submodule -->
-		<summary><b>bff</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/package-lock.json\'>package-lock.json</a></b></td>
-				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/jest.setup.js\'>jest.setup.js</a></b></td>
-				<td><code>❯ Jest setup file that runs before tests, configuring test environment and global setup.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/babel.config.js\'>babel.config.js</a></b></td>
-				<td><code>❯ Babel configuration file for transforming modern JavaScript code for browser compatibility.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/package.json\'>package.json</a></b></td>
-				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/server.js\'>server.js</a></b></td>
-				<td><code>❯ Main server file that sets up and configures the application's backend server and API endpoints.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/jest.config.js\'>jest.config.js</a></b></td>
-				<td><code>❯ Configuration file for Jest testing framework, specifying test settings and patterns.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/Dockerfile\'>Dockerfile</a></b></td>
-				<td><code>❯ Contains instructions for building a Docker image for the application, specifying the environment and dependencies.</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>__test__</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/__test__/videos.test.js\'>videos.test.js</a></b></td>
-						<td><code>❯ Test file specifically for video-related functionality and components.</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-			<details>
-				<summary><b>public</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/style.css\'>style.css</a></b></td>
-						<td><code>❯ Main stylesheet file defining the visual presentation and layout of the web application.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/favorite.html\'>favorite.html</a></b></td>
-				<td><code>❯ HTML page specifically for favorite items or bookmarked content within the application.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/script.js\'>script.js</a></b></td>
-				<td><code>❯ Main JavaScript file containing application logic, event handlers, and functionality.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/bff/public/index.html\'>index.html</a></b></td>
-				<td><code>❯ Main HTML entry point for the web application, containing the base structure and content.</code></td>
-			</tr>
-			</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-	<details> <!-- mf_video Submodule -->
-		<summary><b>mf_video</b></summary>
-		<blockquote>
-			<table>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/style.css\'>style.css</a></b></td>
-				<td><code>❯ Main stylesheet file defining the visual presentation and layout of the web application.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/jest.config.mjs\'>jest.config.mjs</a></b></td>
-				<td><code>❯ ES module version of Jest configuration for modern JavaScript module systems.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/package-lock.json\'>package-lock.json</a></b></td>
-				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/{\''>{</a></b></td>
-				<td><code>❯ Opening brace file containing structured data or object definitions.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/jest.setup.js\'>jest.setup.js</a></b></td>
-				<td><code>❯ Jest setup file that runs before tests, configuring test environment and global setup.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/script.js\'>script.js</a></b></td>
-				<td><code>❯ Main JavaScript file containing application logic, event handlers, and functionality.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/babel.config.js\'>babel.config.js</a></b></td>
-				<td><code>❯ Babel configuration file for transforming modern JavaScript code for browser compatibility.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/package.json\'>package.json</a></b></td>
-				<td><code>❯ Defines project metadata, dependencies, scripts, and other npm package configuration.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/index.html\'>index.html</a></b></td>
-				<td><code>❯ Main HTML entry point for the web application, containing the base structure and content.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/webpack.config.js\'>webpack.config.js</a></b></td>
-				<td><code>❯ Configuration file for Webpack, defining how modules are bundled and processed for production.</code></td>
-			</tr>
-			<tr>
-				<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/Dockerfile\'>Dockerfile</a></b></td>
-				<td><code>❯ Contains instructions for building a Docker image for the application, specifying the environment and dependencies.</code></td>
-			</tr>
-			</table>
-			<details>
-				<summary><b>__tests__</b></summary>
-				<blockquote>
-					<table>
-					<tr>
-						<td><b><a href=\'https://github.com/marcelonovello/Micro-Frontends-Application/blob/master/mf_video/__tests__/script.test.js\'>script.test.js</a></b></td>
-						<td><code>❯ Test file containing unit tests for the main application logic in script.js.</code></td>
-					</tr>
-					</table>
-				</blockquote>
-			</details>
-		</blockquote>
-	</details>
-</details>
 
 ---
 ## ⚡ Começando
@@ -336,9 +118,9 @@ A aplicação é containerizada com **Docker** e orquestrada usando **docker-com
 
 Antes de começar com Micro-Frontends-Application, verifique se seu ambiente atende aos seguintes requisitos:
 
-- **Linguagem de Programação:** JavaScript
-- **Gerenciador de Pacotes:** Npm
-- **Runtime de Containers:** Docker
+- [<img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+- [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 ## ⚙️ Instalação
 
@@ -357,12 +139,10 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 ```
 
 3. Instale as dependências:
-
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
 ❯ npm install
 ```
-
 **Usando:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 ```sh
 ❯ docker build -t marcelonovello/Micro-Frontends-Application .
@@ -371,7 +151,6 @@ Instale o Micro-Frontends-Application usando um dos métodos:
 
 ### 🚀 Uso
 Execute o Micro-Frontends-Application usando o seguinte comando:<br>
-
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
 ❯ npm start
@@ -382,20 +161,20 @@ Execute o Micro-Frontends-Application usando o seguinte comando:<br>
 ❯ docker run -it {image_name}
 ```
 
-
 ### 🧪 Testes
 Execute os testes usando o seguinte comando:<br>
-
 **Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 ```sh
 ❯ npm test
 ```
 
-## 🛠 Resolução de Problemas
-- Se portas já estiverem em uso → altere PORT em .env ou docker-compose.yml
-- Se API do YouTube falhar → verifique se YOUTUBE_API_KEY está correta e habilitada
+## 🛠️ Resolução de Problemas
+
+- ⚠️ **Se as portas já estiverem em uso** → Altere a porta em `.env` ou `docker-compose.yml`.  
+- 🐛 **Se a PokeAPI falhar** → Verifique a URL da API ou se o serviço da API está online.  
   
 ---
+
 ## 🗺 Roteiro do Projeto
 
 - [X] **`Init`**: Inicializar estrutura do projeto e criar módulos micro-frontend (`mf_video`, `mf_drawer`).
@@ -464,11 +243,11 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](L
 
 ## 📚 Agradecimentos
 
-*   **Arquitetura Micro-Frontends**: Inspirada em práticas modernas de desenvolvimento web para aplicações escaláveis e deploy independente.
-*   **Webpack Module Federation**: Para integração de micro-frontends construídos separadamente em runtime.
-*   **Jest Testing Framework**: Plataforma de testes completa e amigável ao desenvolvedor.
-*   **Docker & Docker Compose**: Facilita containerização e orquestração multi-serviço, garantindo ambientes consistentes.
-*   **Babel**: Compatibilidade de código JavaScript em diferentes navegadores.
-*   **Comunidade Open Source**: Pelas inúmeras bibliotecas e ferramentas que tornam o desenvolvimento web moderno possível.
+- 🏗️ **Arquitetura Micro-Frontends**: Inspirada em práticas modernas de desenvolvimento web para aplicações escaláveis e deploy independente.
+- ⚡ **Webpack Module Federation**: Para integração de micro-frontends construídos separadamente em runtime.
+- 🧪 **Jest Testing Framework**: Plataforma de testes completa e amigável ao desenvolvedor.
+- 🐳 **Docker & Docker Compose**: Facilita containerização e orquestração multi-serviço, garantindo ambientes consistentes.
+- 🛠️ **Babel**: Compatibilidade de código JavaScript em diferentes navegadores.
+- 🌐 **Comunidade Open Source**: Pelas inúmeras bibliotecas e ferramentas que tornam o desenvolvimento web moderno possível.
 
 ---
