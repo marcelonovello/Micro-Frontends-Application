@@ -17,6 +17,7 @@
   </a>
 </p>
 
+<a id="overview"></a>
 ## 🔎 Overview
 
 This project implements a **micro-frontends YouTube interface** using **Webpack Module Federation**. It allows users to:
@@ -27,6 +28,7 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 - 🧩 **Run in isolated modules** for scalability and independent deployment.  
 - 🐳 **Dockerized & Orchestrated**: The application is containerized with Docker and orchestrated using docker-compose, allowing smooth local development and easy production deployment.
 
+<a id="tech-stack"></a>
 ## 💻 Tech Stack
 <p>
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
@@ -52,6 +54,7 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 
 ---
 
+<a id="features"></a>
 ## ✨ Features
 
 - ⚡ **Micro-Frontends Architecture** – Modular structure with independent builds and deployments.
@@ -61,6 +64,7 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 - ⏳ **Hot Reloading** – Instant feedback during development.
 - 📦 **Scalable Design** – Modules can be extended or replaced without affecting the whole app.
 
+<a id="project-structure"></a>
 ## 🏗 Project Structure
 
 ```sh
@@ -110,8 +114,10 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 
 ---
 
+<a id="getting-started"></a>
 ## 🚀 Getting Started
 
+<a id="prerequisites"></a>
 ### ⚙️ Prerequisites
 
 Before getting started with Micro-Frontends-Application, ensure your runtime environment meets the following requirements:
@@ -120,7 +126,7 @@ Before getting started with Micro-Frontends-Application, ensure your runtime env
 - [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 - [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
 
-
+<a id="installation"></a>
 ## ⬇️ Installation
 
 Install Micro-Frontends-Application using one of the following methods:
@@ -146,6 +152,7 @@ npm install
 docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
+<a id="usage"></a>
 ## 🛠️ Usage
 Run Micro-Frontends-Application using the following command:<br>
 ```bash
@@ -156,18 +163,21 @@ npm start
 docker run -it {image_name}
 ```
 
+<a id="testing"></a>
 ## 🧪 Testing
 Run the test suite using the following command:<br>
 ```sh
 npm test
 ```
 
+<a id="troubleshooting"></a>
 ## 🔧 Troubleshooting
 - ⚠️ **If ports are already in use** → change PORT in .env or docker-compose.yml
 - 🐛 **If YouTube API fails** → verify your YOUTUBE_API_KEY is correct and enabled
 
 ---
 
+<a id="project-roadmap"></a>
 ## 🗺 Project Roadmap
 
 - [X] **`Init`**: Initialize project structure and create micro-frontend modules (`mf_video`, `mf_drawer`).
@@ -185,6 +195,7 @@ npm test
 
 ---
 
+<a id="contributing"></a>
 ## 👥 Contributing
 
 - **💬 [Join the Discussions](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Share your insights, provide feedback, or ask questions.
@@ -228,12 +239,14 @@ npm test
 
 ---
 
+<a id="license"></a>
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full details.
 
 ---
 
+<a id="acknowledgments"></a>
 ## 📚 Acknowledgments
 
 - 🏗️ **Micro-Frontends Architecture:** Inspired by modern web development practices for building scalable and independently deployable frontend applications.  
