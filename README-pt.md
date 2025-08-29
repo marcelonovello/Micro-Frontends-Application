@@ -32,8 +32,6 @@ Permite que os usuários:
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
 </p></div>
 
----
-
 ## 📑 Sumário
 
 - 📖 [Visão Geral](#-visão-geral)
@@ -62,60 +60,57 @@ Permite que os usuários:
 - ⏳ **Hot Reloading** – Feedback instantâneo durante o desenvolvimento.
 - 📦 **Design Escalável** – Módulos podem ser estendidos ou substituídos sem afetar a aplicação inteira.
 
----
-
 ## 🏗 Estrutura do Projeto
 
 ```sh
-└── 📦 Micro-Frontends-Application/
-    ├── 📄 README.md
-    ├── 📂 bff/
-    │   ├── 📄 Dockerfile
-    │   ├── 📄 __test__
-    │   ├── 📄 babel.config.js
-    │   ├── 📄 jest.config.js
-    │   ├── 📄 jest.setup.js
-    │   ├── 📄 package-lock.json
-    │   ├── 📄 package.json
-    │   ├── 📄 public
-    │   └── 📄 server.js
-    ├── 📄 docker-compose.yml
-    ├── 📂 mf_drawer/
-    │   ├── 📄 .env.production
-    │   ├── 📄 Dockerfile
-    │   ├── 📄 babel.config.js
-    │   ├── 📄 favorite.html
-    │   ├── 📄 index.html
-    │   ├── 📄 jest.config.js
-    │   ├── 📄 jest.setup.js
-    │   ├── 📄 package-lock.json
-    │   ├── 📄 package.json
-    │   ├── 📄 script.js
-    │   ├── 📄 style.css
-    │   └── 📄 test
-    ├── 📂 mf_video/
-    │   ├── 📄 Dockerfile
-    │   ├── 📄 __tests__
-    │   ├── 📄 babel.config.js
-    │   ├── 📄 dist
-    │   ├── 📄 index.html
-    │   ├── 📄 jest.config.mjs
-    │   ├── 📄 jest.setup.js
-    │   ├── 📄 package-lock.json
-    │   ├── 📄 package.json
-    │   ├── 📄 script.js
-    │   ├── 📄 style.css
-    │   ├── 📄 webpack.config.js
-    │   └── 📄 {
-    └── 📄 package-lock.json
-
+└── 📦 Micro-Frontends-Application/          # Pasta raiz do projeto de Micro-Frontends
+    ├── 📄 README.md                         # Documentação principal do projeto
+    ├── 📂 bff/                               # Serviço Backend-for-Frontend
+    │   ├── 📄 Dockerfile                     # Instruções Docker para build do BFF
+    │   ├── 📄 __test__                       # Pasta contendo testes do BFF
+    │   ├── 📄 babel.config.js                # Configuração do Babel
+    │   ├── 📄 jest.config.js                 # Configuração do Jest para testes
+    │   ├── 📄 jest.setup.js                  # Scripts de setup do Jest
+    │   ├── 📄 package-lock.json              # Versões exatas dos pacotes Node instalados
+    │   ├── 📄 package.json                   # Dependências Node e scripts
+    │   ├── 📄 public                         # Pasta pública de assets estáticos
+    │   └── 📄 server.js                       # Ponto de entrada do servidor BFF
+    ├── 📄 docker-compose.yml                 # Configuração do Docker Compose
+    ├── 📂 mf_drawer/                          # Micro-frontend do componente drawer
+    │   ├── 📄 .env.production               # Variáveis de ambiente de produção
+    │   ├── 📄 Dockerfile                     # Instruções Docker para mf_drawer
+    │   ├── 📄 babel.config.js                # Configuração do Babel
+    │   ├── 📄 favorite.html                  # Página HTML de favoritos
+    │   ├── 📄 index.html                     # Página HTML principal
+    │   ├── 📄 jest.config.js                 # Configuração do Jest
+    │   ├── 📄 jest.setup.js                  # Scripts de setup do Jest
+    │   ├── 📄 package-lock.json              # Versões exatas dos pacotes Node instalados
+    │   ├── 📄 package.json                   # Dependências Node e scripts
+    │   ├── 📄 script.js                      # Lógica JavaScript do drawer
+    │   ├── 📄 style.css                      # Estilos do drawer
+    │   └── 📄 test                           # Pasta de testes
+    ├── 📂 mf_video/                           # Micro-frontend do componente de vídeo
+    │   ├── 📄 Dockerfile                     # Instruções Docker para mf_video
+    │   ├── 📄 __tests__                      # Pasta contendo testes do vídeo
+    │   ├── 📄 babel.config.js                # Configuração do Babel
+    │   ├── 📄 dist                            # Pasta de saída do build
+    │   ├── 📄 index.html                     # Página HTML principal
+    │   ├── 📄 jest.config.mjs                # Configuração do módulo Jest
+    │   ├── 📄 jest.setup.js                  # Scripts de setup do Jest
+    │   ├── 📄 package-lock.json              # Versões exatas dos pacotes Node instalados
+    │   ├── 📄 package.json                   # Dependências Node e scripts
+    │   ├── 📄 script.js                      # Lógica JavaScript do vídeo
+    │   ├── 📄 style.css                      # Estilos do componente de vídeo
+    │   ├── 📄 webpack.config.js              # Configuração do Webpack
+    │   └── 📄 {                              # Arquivos adicionais ou placeholder
+    └── 📄 package-lock.json                   # Versões exatas dos pacotes Node instalados
 ```
 
 ---
 
-## ⚡ Começando
+## 🚀 Começando
 
-### 🛠 Pré-requisitos
+### ⚙️ Pré-requisitos
 
 Antes de começar com Micro-Frontends-Application, verifique se seu ambiente atende aos seguintes requisitos:
 
@@ -123,7 +118,7 @@ Antes de começar com Micro-Frontends-Application, verifique se seu ambiente ate
 - [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 - [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
 
-## ⚙️ Instalação
+## ⬇️ Instalação
 
 Instale o Micro-Frontends-Application usando um dos métodos:
 
@@ -140,27 +135,23 @@ cd Micro-Frontends-Application
 ```
 
 3. Instale as dependências:
-
-**Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-```sh
+```bash
+# Usando npm:
 npm install
-```
-**Usando:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
-```sh
+
+# Usando Docker:
 docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
-
-## 🚀 Uso
+## 🛠️ Uso
 Execute o Micro-Frontends-Application usando o seguinte comando:<br>
-**Usando:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-```sh
-❯ npm start
-```
 
-**Usando:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
 ```sh
-❯ docker run -it {image_name}
+# Usando npm:
+npm start
+
+# Usando Docker:
+docker run -it {image_name}
 ```
 
 ## 🧪 Testes
