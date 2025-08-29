@@ -172,7 +172,7 @@ Execute os testes usando o seguinte comando:<br>
 ## 🔧 Resolução de Problemas
 
 - ⚠️ **Se as portas já estiverem em uso** → Altere a porta em `.env` ou `docker-compose.yml`.  
-- 🐛 **Se a PokeAPI falhar** → Verifique a URL da API ou se o serviço da API está online.  
+- 🐛 **Se a YouTube API falhar** → Verifique a URL da API ou se o serviço da API está online.  
   
 ---
 
