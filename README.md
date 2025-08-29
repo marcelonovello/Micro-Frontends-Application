@@ -32,7 +32,6 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
 </p></div>
 
----
 
 ## 📑 Table of Contents
 
@@ -51,7 +50,6 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 - 📄 [License](#license)  
 - 📚 [Acknowledgments](#acknowledgments)
 
-
 ---
 
 ## ✨ Features
@@ -63,60 +61,58 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 - ⏳ **Hot Reloading** – Instant feedback during development.
 - 📦 **Scalable Design** – Modules can be extended or replaced without affecting the whole app.
 
----
-
 ## 🏗 Project Structure
 
 ```sh
-└── 📦 Micro-Frontends-Application/
-    ├── 📄 README.md
-    ├── 📂 bff/
-    │   ├── 📄 Dockerfile
-    │   ├── 📄 __test__
-    │   ├── 📄 babel.config.js
-    │   ├── 📄 jest.config.js
-    │   ├── 📄 jest.setup.js
-    │   ├── 📄 package-lock.json
-    │   ├── 📄 package.json
-    │   ├── 📄 public
-    │   └── 📄 server.js
-    ├── 📄 docker-compose.yml
-    ├── 📂 mf_drawer/
-    │   ├── 📄 .env.production
-    │   ├── 📄 Dockerfile
-    │   ├── 📄 babel.config.js
-    │   ├── 📄 favorite.html
-    │   ├── 📄 index.html
-    │   ├── 📄 jest.config.js
-    │   ├── 📄 jest.setup.js
-    │   ├── 📄 package-lock.json
-    │   ├── 📄 package.json
-    │   ├── 📄 script.js
-    │   ├── 📄 style.css
-    │   └── 📄 test
-    ├── 📂 mf_video/
-    │   ├── 📄 Dockerfile
-    │   ├── 📄 __tests__
-    │   ├── 📄 babel.config.js
-    │   ├── 📄 dist
-    │   ├── 📄 index.html
-    │   ├── 📄 jest.config.mjs
-    │   ├── 📄 jest.setup.js
-    │   ├── 📄 package-lock.json
-    │   ├── 📄 package.json
-    │   ├── 📄 script.js
-    │   ├── 📄 style.css
-    │   ├── 📄 webpack.config.js
-    │   └── 📄 {
-    └── 📄 package-lock.json
+└── 📦 Micro-Frontends-Application/          # Root folder of the Micro-Frontends project
+    ├── 📄 README.md                         # Main project documentation and overview
+    ├── 📂 bff/                               # Backend-for-Frontend service
+    │   ├── 📄 Dockerfile                     # Docker build instructions for BFF
+    │   ├── 📄 __test__                       # Folder containing BFF tests
+    │   ├── 📄 babel.config.js                # Babel configuration
+    │   ├── 📄 jest.config.js                 # Jest test configuration
+    │   ├── 📄 jest.setup.js                  # Jest setup scripts
+    │   ├── 📄 package-lock.json              # Exact versions of installed Node packages
+    │   ├── 📄 package.json                   # Node dependencies and scripts
+    │   ├── 📄 public                         # Public folder for static assets
+    │   └── 📄 server.js                       # Entry point of the BFF server
+    ├── 📄 docker-compose.yml                 # Docker Compose configuration
+    ├── 📂 mf_drawer/                          # Micro-frontend for drawer component
+    │   ├── 📄 .env.production               # Production environment variables
+    │   ├── 📄 Dockerfile                     # Docker build instructions for mf_drawer
+    │   ├── 📄 babel.config.js                # Babel configuration
+    │   ├── 📄 favorite.html                  # HTML page for favorites
+    │   ├── 📄 index.html                     # Main HTML page
+    │   ├── 📄 jest.config.js                 # Jest configuration
+    │   ├── 📄 jest.setup.js                  # Jest setup scripts
+    │   ├── 📄 package-lock.json              # Exact versions of installed Node packages
+    │   ├── 📄 package.json                   # Node dependencies and scripts
+    │   ├── 📄 script.js                      # JavaScript logic for drawer
+    │   ├── 📄 style.css                      # Styles for drawer
+    │   └── 📄 test                           # Test folder
+    ├── 📂 mf_video/                           # Micro-frontend for video component
+    │   ├── 📄 Dockerfile                     # Docker build instructions for mf_video
+    │   ├── 📄 __tests__                      # Folder containing video tests
+    │   ├── 📄 babel.config.js                # Babel configuration
+    │   ├── 📄 dist                            # Build output folder
+    │   ├── 📄 index.html                     # Main HTML page
+    │   ├── 📄 jest.config.mjs                # Jest configuration module
+    │   ├── 📄 jest.setup.js                  # Jest setup scripts
+    │   ├── 📄 package-lock.json              # Exact versions of installed Node packages
+    │   ├── 📄 package.json                   # Node dependencies and scripts
+    │   ├── 📄 script.js                      # JavaScript logic for video
+    │   ├── 📄 style.css                      # Styles for video component
+    │   ├── 📄 webpack.config.js              # Webpack configuration
+    │   └── 📄 {                              # Placeholder or additional files
+    └── 📄 package-lock.json                   # Exact versions of installed Node packages
 
 ```
 
 ---
 
-## ⚡ Getting Started
+## 🚀 Getting Started
 
-### 🛠 Prerequisites
+### ⚙️ Prerequisites
 
 Before getting started with Micro-Frontends-Application, ensure your runtime environment meets the following requirements:
 
@@ -125,7 +121,7 @@ Before getting started with Micro-Frontends-Application, ensure your runtime env
 - [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
 
 
-##  ⚙️ Installation
+## ⬇️ Installation
 
 Install Micro-Frontends-Application using one of the following methods:
 
@@ -142,36 +138,23 @@ cd Micro-Frontends-Application
 ```
 
 3. Install the project dependencies:
-
-
-**Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
+```bash
+# Using npm:
 npm install
-```
 
-
-**Using:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
-
-```sh
+# Using Docker:
 docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
-
-## 🚀 Usage
+## 🛠️ Usage
 Run Micro-Frontends-Application using the following command:<br>
-**Using:** [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-
-```sh
+```bash
+# Using npm:
 npm start
-```
 
-**Using:** [<img align="center" src="https://img.shields.io/badge/Docker-2CA5E0.svg?style={badge_style}&logo=docker&logoColor=white" />](https://www.docker.com/)
-
-```sh
+# Using Docker:
 docker run -it {image_name}
 ```
-
 
 ## 🧪 Testing
 Run the test suite using the following command:<br>
