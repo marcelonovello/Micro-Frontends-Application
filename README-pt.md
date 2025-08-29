@@ -17,6 +17,7 @@
   </a>
 </p>
 
+<a id="visao-geral"></a>
 ## 🔎 Visão Geral
 
 Este projeto implementa uma **interface de micro-frontends para YouTube** usando **Webpack Module Federation**.  
@@ -27,6 +28,7 @@ Permite que os usuários:
 - 🧩 Executar em módulos isolados para escalabilidade e implantação independente.  
 - 🐳 Dockerizado e orquestrado: A aplicação é containerizada com Docker e orquestrada usando docker-compose, permitindo um desenvolvimento local tranquilo e implantação em produção de forma simples.  
 
+<a id="tecnologias"></a>
 ## 💻 Tecnologias
 <p>
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
@@ -38,7 +40,7 @@ Permite que os usuários:
 - 💻 [Tecnologias](#tecnologias)
 - ✨ [Funcionalidades](#funcionalidades)
 - 🏗 [Estrutura do Projeto](#estrutura-do-projeto)
-- 🚀 [Começando](#começando)
+- 🚀 [Começando](#comecando)
   - ⚙️ [Pré-requisitos](#pre-requisitos)
   - ⬇️ [Instalação](#instalacao)
   - 🛠️ [Uso](#uso)
@@ -51,6 +53,7 @@ Permite que os usuários:
 
 ---
 
+<a id="funcionalidades"></a>
 ## ✨ Funcionalidades
 
 - ⚡ **Arquitetura Micro-Frontends** – Estrutura modular com builds e deploys independentes.
@@ -60,6 +63,7 @@ Permite que os usuários:
 - ⏳ **Hot Reloading** – Feedback instantâneo durante o desenvolvimento.
 - 📦 **Design Escalável** – Módulos podem ser estendidos ou substituídos sem afetar a aplicação inteira.
 
+<a id="estrutura-do-projeto"></a>
 ## 🏗 Estrutura do Projeto
 
 ```sh
@@ -108,8 +112,11 @@ Permite que os usuários:
 
 ---
 
+
+<a id="comecando"></a>
 ## 🚀 Começando
 
+<a id="pre-requisitos"></a>
 ### ⚙️ Pré-requisitos
 
 Antes de começar com Micro-Frontends-Application, verifique se seu ambiente atende aos seguintes requisitos:
@@ -118,6 +125,7 @@ Antes de começar com Micro-Frontends-Application, verifique se seu ambiente ate
 - [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 - [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
 
+<a id="instalacao"></a>
 ## ⬇️ Instalação
 
 Instale o Micro-Frontends-Application usando um dos métodos:
@@ -143,6 +151,7 @@ npm install
 docker build -t marcelonovello/Micro-Frontends-Application .
 ```
 
+<a id="uso"></a>
 ## 🛠️ Uso
 Execute o Micro-Frontends-Application usando o seguinte comando:<br>
 
@@ -154,12 +163,14 @@ npm start
 docker run -it {image_name}
 ```
 
+<a id="testes"></a>
 ## 🧪 Testes
 Execute os testes usando o seguinte comando:<br>
 ```sh
 ❯ npm test
 ```
 
+<a id="resolucao-de-problemas"></a>
 ## 🔧 Resolução de Problemas
 
 - ⚠️ **Se as portas já estiverem em uso** → Altere a porta em `.env` ou `docker-compose.yml`.  
@@ -167,6 +178,7 @@ Execute os testes usando o seguinte comando:<br>
   
 ---
 
+<a id="roteiro-do-projeto"></a>
 ## 🗺 Roteiro do Projeto
 
 - [X] **`Init`**: Inicializar estrutura do projeto e criar módulos micro-frontend (`mf_video`, `mf_drawer`).
@@ -184,6 +196,7 @@ Execute os testes usando o seguinte comando:<br>
 
 ---
 
+<a id="contribuindo"></a>
 ## 👥 Contribuindo
 
 - **💬 [Participe das Discussões](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Compartilhe suas ideias, forneça feedback ou faça perguntas.
@@ -227,12 +240,14 @@ Execute os testes usando o seguinte comando:<br>
 
 ---
 
+<a id="licenca"></a>
 ## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
+<a id="agradecimentos"></a>
 ## 📚 Agradecimentos
 
 - 🏗️ **Arquitetura Micro-Frontends**: Inspirada em práticas modernas de desenvolvimento web para aplicações escaláveis e deploy independente.
