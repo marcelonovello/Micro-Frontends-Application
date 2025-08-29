@@ -27,7 +27,7 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 - 🧩 **Run in isolated modules** for scalability and independent deployment.  
 - 🐳 **Dockerized & Orchestrated**: The application is containerized with Docker and orchestrated using docker-compose, allowing smooth local development and easy production deployment.
 
-## 🛠 Tech Stack
+## 💻 Tech Stack
 <p>
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
 </p></div>
@@ -35,14 +35,14 @@ This project implements a **micro-frontends YouTube interface** using **Webpack 
 
 ## 📑 Table of Contents
 
-- 📖 [Overview](#overview)
-- 🛠 [Tech Stack](#tech-stack) 
+- 🔍 [Overview](#overview)
+- 💻 [Tech Stack](#tech-stack) 
 - ✨ [Features](#features)
 - 🏗 [Project Structure](#project-structure)   
 - 🚀 [Getting Started](#getting-started)
-  - 🛠 [Prerequisites](#prerequisites)
-  - ⚙️ [Installation](#installation)
-  - 🚀 [Usage](#usage)
+  - ⚙️ [Prerequisites](#prerequisites)
+  - ⬇️ [Installation](#installation)
+  - 🛠️ [Usage](#usage)
   - 🧪 [Testing](#testing)
   	- 🔧 [Troubleshooting](#troubleshooting)
 - 🗺 [Project Roadmap](#project-roadmap)  
