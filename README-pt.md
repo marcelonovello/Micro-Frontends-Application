@@ -27,21 +27,21 @@ Permite que os usuários:
 - 🧩 Executar em módulos isolados para escalabilidade e implantação independente.  
 - 🐳 Dockerizado e orquestrado: A aplicação é containerizada com Docker e orquestrada usando docker-compose, permitindo um desenvolvimento local tranquilo e implantação em produção de forma simples.  
 
-## 🛠 Tecnologias
+## 💻 Tecnologias
 <p>
   <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
 </p></div>
 
 ## 📑 Sumário
 
-- 📖 [Visão Geral](#-visão-geral)
-- 🛠 [Tecnologias](#-tecnologias)
+- 🔎 [Visão Geral](#-visão-geral)
+- 💻 [Tecnologias](#-tecnologias)
 - ✨ [Funcionalidades](#-funcionalidades)
 - 🏗 [Estrutura do Projeto](#-estrutura-do-projeto)
 - 🚀 [Começando](#-começando)
-  - 🛠 [Pré-requisitos](#-pré-requisitos)
-  - ⚙️ [Instalação](#-instalação)
-  - 🚀 [Uso](#-uso)
+  - ⚙️ [Pré-requisitos](#-pré-requisitos)
+  - ⬇️ [Instalação](#-instalação)
+  - 🛠️ [Uso](#-uso)
   - 🧪 [Testes](#-testes)
   	- 🔧 [Resolução de Problemas](#-resolução-de-Problemas)
 - 🗺 [Roteiro do Projeto](#-roteiro-do-projeto)
