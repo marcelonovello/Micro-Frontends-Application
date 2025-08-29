@@ -34,20 +34,20 @@ Permite que os usuários:
 
 ## 📑 Sumário
 
-- 🔎 [Visão Geral](#-visão-geral)
-- 💻 [Tecnologias](#-tecnologias)
-- ✨ [Funcionalidades](#-funcionalidades)
-- 🏗 [Estrutura do Projeto](#-estrutura-do-projeto)
-- 🚀 [Começando](#-começando)
-  - ⚙️ [Pré-requisitos](#-pré-requisitos)
-  - ⬇️ [Instalação](#-instalação)
-  - 🛠️ [Uso](#-uso)
-  - 🧪 [Testes](#-testes)
-  	- 🔧 [Resolução de Problemas](#-resolução-de-Problemas)
-- 🗺 [Roteiro do Projeto](#-roteiro-do-projeto)
-- 👥 [Contribuindo](#-contribuindo)
-- 📄 [Licença](#-licença)
-- 📚 [Agradecimentos](#-agradecimentos)
+- 🔎 [Visão Geral](#visao-geral)
+- 💻 [Tecnologias](#tecnologias)
+- ✨ [Funcionalidades](#funcionalidades)
+- 🏗 [Estrutura do Projeto](#estrutura-do-projeto)
+- 🚀 [Começando](#começando)
+  - ⚙️ [Pré-requisitos](#pre-requisitos)
+  - ⬇️ [Instalação](#instalacao)
+  - 🛠️ [Uso](#uso)
+  - 🧪 [Testes](#testes)
+    - 🔧 [Resolução de Problemas](#resolucao-de-problemas)
+- 🗺 [Roteiro do Projeto](#roteiro-do-projeto)
+- 👥 [Contribuindo](#contribuindo)
+- 📄 [Licença](#licenca)
+- 📚 [Agradecimentos](#agradecimentos)
 
 ---
 
