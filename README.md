@@ -132,7 +132,7 @@ docker compose down
 ---
 
 <a id="project-structure"></a>
-## 🏗 Estrutura do Projeto
+## 🏗 Project Structure
 
 ```sh
 └── 📦 Micro-Frontends-Application/          # Root folder of the Micro-Frontends project
