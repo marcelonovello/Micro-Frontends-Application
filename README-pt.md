@@ -1,10 +1,11 @@
 [🇺🇸 English](./README.md)   |   [🇧🇷 Português](./README-pt.md)
 
-<br>
 <h1 align="center">🧩 YouTube Data Connector</h1>
+
 <p align="center">
-	Uma arquitetura modular de micro-frontends para navegar, buscar e favoritar vídeos do YouTube, construída com Webpack Module Federation, Docker e tecnologias web modernas.
+	Uma arquitetura modular de micro-frontends para buscar e favoritar vídeos do YouTube, construída com Docker e Webpack Module Federation.
 </p>
+
 <p align="center">
   <a href="https://www.docker.com/">
     <img src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" />
@@ -15,53 +16,117 @@
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat" />
   </a>
+  <img src="https://img.shields.io/github/stars/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
+  <img src="https://img.shields.io/github/forks/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
+  
 </p>
 
+---
 <a id="visao-geral"></a>
 ## 🔎 Visão Geral
 
-Este projeto implementa uma **interface de micro-frontends para YouTube** usando **Webpack Module Federation**.  
-Permite que os usuários:
-- 🔍 Navegar e buscar vídeos do YouTube via YouTube Data API.  
-- 🎬 Visualizar informações detalhadas dos vídeos.  
-- ⭐ Favoritar vídeos para acesso rápido.  
-- 🧩 Executar em módulos isolados para escalabilidade e implantação independente.  
-- 🐳 Dockerizado e orquestrado: A aplicação é containerizada com Docker e orquestrada usando docker-compose, permitindo um desenvolvimento local tranquilo e implantação em produção de forma simples.  
+O **YouTube Data Connector** é um projeto que demonstra **micro-frontends modulares**, permitindo múltiplos módulos independentes que podem ser atualizados e implantados separadamente.  
 
-<a id="tecnologias"></a>
-## 💻 Tecnologias
-<p>
-  <img src="https://skillicons.dev/icons?i=js,html,css,webpack,nodejs,docker" />
-</p></div>
+> 💡 **Por que este projeto é relevante?**  
+> Ele mostra como criar uma arquitetura escalável com **Webpack Module Federation** e **Docker**, ideal para grandes times que precisam integrar e atualizar módulos de forma independente, com alta manutenibilidade e baixo acoplamento.
 
-## 📑 Sumário
+Funcionalidades principais:
 
-- 🔎 [Visão Geral](#visao-geral)
-- 💻 [Tecnologias](#tecnologias)
-- ✨ [Funcionalidades](#funcionalidades)
-- 🏗 [Estrutura do Projeto](#estrutura-do-projeto)
-- 🚀 [Começando](#comecando)
-  - ⚙️ [Pré-requisitos](#pre-requisitos)
-  - ⬇️ [Instalação](#instalacao)
-  - 🛠️ [Uso](#uso)
-  - 🧪 [Testes](#testes)
-    - 🔧 [Resolução de Problemas](#resolucao-de-problemas)
-- 🗺 [Roteiro do Projeto](#roteiro-do-projeto)
-- 👥 [Contribuindo](#contribuindo)
-- 📄 [Licença](#licenca)
-- 📚 [Agradecimentos](#agradecimentos)
+- Buscar vídeos do YouTube.
+- Favoritar vídeos.
+- Navegação fluida entre módulos sem recarregar a aplicação.
+- Arquitetura escalável via Docker.
+- Integração com APIs externas.
 
 ---
 
-<a id="funcionalidades"></a>
-## ✨ Funcionalidades
+## 📑 Sumário
+- [Visão Geral](#visao-geral)
+- [Demonstração](#demonstracao)
+- [Tecnologias](#tecnologias-utilizadas)
+- [Como Executar](#como-executar-o-projeto-local)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Resolução de Problemas](#resolucao-de-problemas)
+- [Roteiro](#roteiro-do-projeto)
+- [Licença](#licenca)
+- [Aprendizados](#aprendizados)
+- [Contato](#contato)
 
-- ⚡ **Arquitetura Micro-Frontends** – Estrutura modular com builds e deploys independentes.
-- 🔎 **Integração com API do YouTube** – Buscar, navegar e obter detalhes dos vídeos.
-- ⭐ **Sistema de Favoritos** – Salve e gerencie vídeos favoritos localmente.
-- 🐳 **Desenvolvimento Containerizado** – Totalmente containerizado para reprodutibilidade.
-- ⏳ **Hot Reloading** – Feedback instantâneo durante o desenvolvimento.
-- 📦 **Design Escalável** – Módulos podem ser estendidos ou substituídos sem afetar a aplicação inteira.
+---
+<a id="demonstracao"></a>
+## 🎬 Demonstração
+
+<p align="center">
+  <img src="./assets/demo-search.png" alt="Busca de Vídeos" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/demo-favorites.png" alt="Favoritar Vídeos" width="80%" />
+</p>
+<p align="center">
+  <img src="./assets/demo-navigation.png" alt="Navegação entre Módulos" width="80%" />
+</p>
+
+
+💻 **Deploy ativo:**  
+- Frontend: [https://micro-frontends-application.onrender.com/](https://micro-frontends-application.onrender.com/)  
+
+---
+<a id="tecnologias-utilizadas"></a>
+## 🛠️ Tecnologias Utilizadas
+
+| Camada               | Tecnologias / Ferramentas                 |
+|----------------------|--------------------------------------------|
+| Frontend             | [React](https://react.dev/), [Angular](https://angular.dev/), [Webpack Module Federation](https://webpack.js.org/concepts/module-federation/) |
+| Backend / API        | [Node.js](https://nodejs.org/), [Express](https://expressjs.com/) |
+| Containerização      | [Docker](https://www.docker.com/), [Docker Compose](https://docs.docker.com/compose/) |
+| Integração & Deploy  | [GitHub Actions](https://github.com/features/actions), [Docker Hub](https://hub.docker.com/) |
+| Estilo e UI          | [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS), [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML), [Material-UI](https://mui.com/) / [Tailwind](https://tailwindcss.com/) |
+
+---
+
+<a id="como-executar-o-projeto-local"></a>
+## 🚀 Como Executar o Projeto (Local)
+
+### ⚙️ Pré-requisitos
+
+Antes de começar, verifique se seu ambiente atende aos seguintes requisitos:
+
+- [<img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+- [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
+
+
+### ⬇️ Instalação Rápida
+️1️⃣ Clone o repositório
+```bash
+git clone https://github.com/marcelonovello/YouTube-Data-Connector.git
+cd YouTube-Data-Connector
+```
+2️⃣ Construir e subir com Docker
+```bash
+docker compose up --build
+```
+3️⃣ Acessar os micro-frontends
+```bash
+| Micro-frontend | URL local             |
+|----------------|-----------------------|
+| Bff            | http://localhost:3000 |
+| Drawer         | http://localhost:3001 |
+| Video         | http://localhost:3002 |
+
+```
+
+4️⃣ Testar funcionalidades
+- Buscar vídeos → no micro-frontend de vídeo
+- Favoritar vídeos → no drawer
+- Navegação entre módulos → teste links entre os micro-frontends
+
+5️⃣ Parar a Aplicação
+```bash
+docker compose down
+```
+
+---
 
 <a id="estrutura-do-projeto"></a>
 ## 🏗 Estrutura do Projeto
@@ -112,64 +177,6 @@ Permite que os usuários:
 
 ---
 
-
-<a id="comecando"></a>
-## 🚀 Começando
-
-<a id="pre-requisitos"></a>
-### ⚙️ Pré-requisitos
-
-Antes de começar com Micro-Frontends-Application, verifique se seu ambiente atende aos seguintes requisitos:
-
-- [<img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-- [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
-
-<a id="instalacao"></a>
-## ⬇️ Instalação
-
-Instale o Micro-Frontends-Application usando um dos métodos:
-
-**Build a partir do código-fonte:**
-
-1. Clone o repositório:
-```sh
-git clone https://github.com/marcelonovello/Micro-Frontends-Application
-```
-
-2. Navegue até o diretório do projeto:
-```sh
-cd Micro-Frontends-Application
-```
-
-3. Instale as dependências:
-```bash
-# Usando npm:
-npm install
-
-# Usando Docker:
-docker build -t marcelonovello/Micro-Frontends-Application .
-```
-
-<a id="uso"></a>
-## 🛠️ Uso
-Execute o Micro-Frontends-Application usando o seguinte comando:<br>
-
-```sh
-# Usando npm:
-npm start
-
-# Usando Docker:
-docker run -it {image_name}
-```
-
-<a id="testes"></a>
-## 🧪 Testes
-Execute os testes usando o seguinte comando:<br>
-```sh
-❯ npm test
-```
-
 <a id="resolucao-de-problemas"></a>
 ## 🔧 Resolução de Problemas
 
@@ -181,62 +188,12 @@ Execute os testes usando o seguinte comando:<br>
 <a id="roteiro-do-projeto"></a>
 ## 🗺 Roteiro do Projeto
 
-- [X] **`Init`**: Inicializar estrutura do projeto e criar módulos micro-frontend (`mf_video`, `mf_drawer`).
-- [X] **`Config`**: Configurar ferramentas principais (Webpack, Babel, Jest) e arquivos de configuração.
-- [X] **`Container`**: Desenvolver shell principal da aplicação (`index.html`, `script.js`).
-- [ ] **`MF Video`**: Criar e estilizar componente principal do player de vídeo.
-- [ ] **`MF Drawer`**: Desenvolver drawer de navegação e integrar sistema de favoritos.
-- [ ] **`Comms`**: Estabelecer padrão de comunicação entre micro-frontends e container.
-- [ ] **`Integrate`**: Usar Webpack Module Federation para carregar micro-frontends dinamicamente.
-- [ ] **`Deploy`**: Finalizar containerização Docker e configuração multi-ambiente.
-- [ ] **`Optimize`**: Analisar e otimizar tamanhos de bundle, implementar lazy loading.
-- [ ] **`Test`**: Criar testes de integração e E2E; estabelecer pipeline CI/CD.
-- [ ] **`Expand`**: Adicionar novos micro-frontends (ex: perfil do usuário, comentários).
-- [ ] **`Improve`**: Melhorar experiência do desenvolvedor e documentação.
-
----
-
-<a id="contribuindo"></a>
-## 👥 Contribuindo
-
-- **💬 [Participe das Discussões](https://github.com/marcelonovello/Micro-Frontends-Application/discussions)**: Compartilhe suas ideias, forneça feedback ou faça perguntas.
-- **🐛 [Reportar Problemas](https://github.com/marcelonovello/Micro-Frontends-Application/issues)**: Envie bugs encontrados ou registre solicitações de novas funcionalidades para o projeto `Micro-Frontends-Application`.
-- **💡 [Submeta Pull Requests](https://github.com/marcelonovello/Micro-Frontends-Application/blob/main/CONTRIBUTING.md)**: Analise PRs abertos e envie seus próprios PRs.
-
-<details closed>
-<summary>Diretrizes para Contribuição</summary>
-
-1. **Fork do Repositório**: Comece fazendo um fork do repositório para sua conta no GitHub.
-2. **Clone Localmente**: Clone o repositório forked para sua máquina usando um cliente git.
-   ```sh
-   git clone https://github.com/marcelonovello/Micro-Frontends-Application
-   ```
-3. **Crie uma Nova Branch**: Sempre trabalhe em uma nova branch, dando um nome descritivo.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Faça Suas Alterações**: Desenvolva e teste suas alterações localmente.
-5. **Commit das Alterações**: Faça commit com uma mensagem clara descrevendo suas atualizações.
-   ```sh
-   git commit -m \'Implemented new feature x.\'
-   ```
-6. **Push para o github**: Envie as alterações para seu repositório forked.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submeta um Pull Request**: Crie um PR contra o repositório original. Descreva claramente as mudanças e suas motivações.
-8. **Revisão**: Uma vez que o PR seja revisado e aprovado, ele será mergeado na branch principal. Parabéns pela contribuição!
-</details>
-
-<details closed>
-<summary>Gráfico de Contribuidores</summary>
-<br>
-<p align="left">
-   <a href="https://github.com{/marcelonovello/Micro-Frontends-Application/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=marcelonovello/Micro-Frontends-Application">
-   </a>
-</p>
-</details>
+- [ ] Autenticação via OAuth do YouTube.
+- [ ] Testes unitários e de integração.
+- [ ] CI/CD completo com deploy automático.
+- [ ] Monitoramento (Sentry, Prometheus).
+- [ ] Melhorias visuais e responsividade dos micro-frontends.
+- [ ] Documentação detalhada para cada módulo. 
 
 ---
 
@@ -247,14 +204,48 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](L
 
 ---
 
-<a id="agradecimentos"></a>
-## 📚 Agradecimentos
+<a id="aprendizados"></a>
+## 📚 Aprendizados
 
-- 🏗️ **Arquitetura Micro-Frontends**: Inspirada em práticas modernas de desenvolvimento web para aplicações escaláveis e deploy independente.
-- ⚡ **Webpack Module Federation**: Para integração de micro-frontends construídos separadamente em runtime.
-- 🧪 **Jest Testing Framework**: Plataforma de testes completa e amigável ao desenvolvedor.
-- 🐳 **Docker & Docker Compose**: Facilita containerização e orquestração multi-serviço, garantindo ambientes consistentes.
-- 🛠️ **Babel**: Compatibilidade de código JavaScript em diferentes navegadores.
-- 🌐 **Comunidade Open Source**: Pelas inúmeras bibliotecas e ferramentas que tornam o desenvolvimento web moderno possível.
+- ⚡ Aplicação prática de Webpack Module Federation.
+- 🐳 Uso de Docker para deploy replicável.
+- 🛠️ Integração com YouTube Data API.
+- 🌐 Boas práticas de Git, commits e documentação.
+- 🎨 Aprimoramento em UI/UX e modularização de código.
 
 ---
+
+<a id="como-contribuir"></a>
+## 🤝 Como Contribuir
+
+Contribuições são bem-vindas! Siga os passos abaixo para colaborar com este projeto:
+
+1. **Faça um Fork** do repositório.  
+2. **Crie uma Branch** para sua feature ou correção:  
+  ```bash
+   git checkout -b minha-feature
+  ```
+3. Faça as alterações necessárias no código ou na documentação..
+4. Confirme as mudanças (commits) com mensagens claras:
+  ```bash
+  git commit -m "Adiciona nova funcionalidade X"
+  ```
+5. Envie para seu Fork:
+  ```bash
+  git push origin minha-feature
+  ```
+6. Abra um Pull Request (PR) para a branch main deste repositório.
+ ```bash
+ 💡 Dica: Antes de enviar o PR, verifique se o código segue os padrões definidos e se todos os testes passam.
+ ```
+
+---
+
+<a id="contato"></a>
+## 📬 Contato
+
+- **Autor:** Marcelo Novello  
+- **GitHub:** [marcelonovello](https://github.com/marcelonovello)  
+- **LinkedIn:** [Marcelo Novello](https://www.linkedin.com/in/marcelo-novello/)  
+
+<p align="center"> ⭐ Se este projeto foi útil, considere deixar uma estrela para apoiar o desenvolvimento! </p>

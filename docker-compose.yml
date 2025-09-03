@@ -7,8 +7,8 @@ services:
   mf_drawer:
     build: ./mf_drawer
     ports:
-      - "8080:8080"
-  mf_videos:
-    build: ./mf_videos
+      - "3001:3000"
+  mf_video:
+    build: ./mf_video
     ports:
-      - "8081:8080"
+      - "3002:3000"
