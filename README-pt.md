@@ -16,10 +16,7 @@ Arquitetura modular de micro-frontends (React, Angular) para navegar, buscar e f
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat" />
   </a>
-  <a href="https://github.com/marcelonovello/YouTube-Data-Connector/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/marcelonovello/YouTube-Data-Connector/ci.yml?style=flat&logo=github" />
-  </a>
-  <img src="https://img.shields.io/github/stars/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
+   <img src="https://img.shields.io/github/stars/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
   <img src="https://img.shields.io/github/forks/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
 </p>
 
@@ -88,9 +85,9 @@ O **YouTube Data Connector** demonstra arquitetura modular de **micro-frontends*
 ## 🚀 Execução Local
 
 ### ⚙️ Pré-requisitos
-- ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) npm
-- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white) Docker
+- ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) 
+- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white) 
 - **Chave da API do YouTube** na variável `YOUTUBE_API_KEY`
 
 ### ⬇️ Instalação Rápida
