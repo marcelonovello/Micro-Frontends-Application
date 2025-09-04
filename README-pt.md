@@ -268,4 +268,4 @@ Contribuições são bem-vindas! Siga os passos abaixo para colaborar com este p
 - **GitHub:** [marcelonovello](https://github.com/marcelonovello)  
 - **LinkedIn:** [Marcelo Novello](https://www.linkedin.com/in/marcelo-novello/)  
 
-<p align="left"> ⭐ Se este projeto foi útil, considere deixar uma estrela para apoiar o desenvolvimento! </p>
+---
