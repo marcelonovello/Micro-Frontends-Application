@@ -181,7 +181,7 @@ docker compose down
 
 <a id="testing"></a>
 
-🧪 Testing
+## 🧪 Testing
 Run unit and integration tests in each micro-frontend:
 ```bash
   cd mf_video && npm test
@@ -267,4 +267,4 @@ Contributions are welcome! Follow these steps:
 - **GitHub:** [marcelonovello](https://github.com/marcelonovello)  
 - **LinkedIn:** [Marcelo Novello](https://www.linkedin.com/in/marcelo-novello/)
 
-<p align="center">⭐ If you found this project useful, please consider giving it a star to support development!</p>
+---
