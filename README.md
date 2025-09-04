@@ -29,7 +29,7 @@
 > 💡 **Why is this project relevant?**  
 > It allows large teams to integrate and update modules independently, ensuring high maintainability and low coupling.
 
-✨ Key Features
+### ✨ Key Features
 - 🔍 Search YouTube videos
 - ⭐ Favorite videos
 - 🔄 Smooth navigation between modules
@@ -195,9 +195,9 @@ Run unit and integration tests in each micro-frontend:
 
 <a id="security"></a>
 ## 🔒 Security
-- 🔐 Keep dependencies updated using npm audit.
+- 🔐 Keep dependencies updated using ``npm audit``.
 - 🛡️ Enable Dependabot on GitHub to monitor vulnerabilities.
-- ❌ Never expose YOUTUBE_API_KEY or other sensitive keys in the repository.
+- ❌ Never expose ``YOUTUBE_API_KEY`` or other sensitive keys in the repository.
 
 ---
 
@@ -212,7 +212,7 @@ Run unit and integration tests in each micro-frontend:
 - [ ] UI/UX improvements and responsiveness.
 - [ ] Detailed documentation per module.
 
-![Progress](https://img.shields.io/badge/Progress-40%25-brightgreen)
+![Progress](https://img.shields.io/badge/Progress-14%25-brightgreen)
 
 ---
 
