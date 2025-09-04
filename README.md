@@ -84,9 +84,9 @@
 
 ### ⚙️ Prerequisites
 
-- ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) npm
-- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white) Docker
+- ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) 
+- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) 
+- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white) 
 - **YouTube API Key** in `YOUTUBE_API_KEY` environment variable
 
 ### ⬇️ Quick Installation
