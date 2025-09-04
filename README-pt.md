@@ -210,7 +210,7 @@ Execute testes unitários e de integração em cada micro-frontend:
 - [ ] Melhorias visuais e responsividade dos micro-frontends.
 - [ ] Documentação detalhada para cada módulo. 
 
-![Progresso](https://img.shields.io/badge/Progress-40%25-brightgreen)
+![Progress](https://img.shields.io/badge/Progress-14%25-brightgreen)
 
 ---
 
