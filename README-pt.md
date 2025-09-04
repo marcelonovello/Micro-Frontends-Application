@@ -240,12 +240,12 @@ Contribuições são bem-vindas! Siga os passos abaixo para colaborar com este p
 1. **Faça um Fork** do repositório.  
 2. **Crie uma Branch** para sua feature ou correção:  
   ```bash
-   git checkout -b minha-feature
+   git checkout -b my-feature
   ```
 3. Faça as alterações necessárias no código ou na documentação.
 4. Confirme as mudanças (commits) com mensagens claras:
   ```bash
-  git commit -m "Adiciona nova funcionalidade X"
+  git commit -m "Add feature X"
   ```
 5. Envie para seu Fork:
   ```bash
