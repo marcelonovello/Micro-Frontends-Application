@@ -14,9 +14,7 @@
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat" />
   </a>
-  <a href="https://github.com/marcelonovello/YouTube-Data-Connector/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/marcelonovello/YouTube-Data-Connector/ci.yml?style=flat&logo=github" />
-  </a>
+  
   <img src="https://img.shields.io/github/stars/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
   <img src="https://img.shields.io/github/forks/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
 </p>
