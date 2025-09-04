@@ -3,7 +3,7 @@
 <h1 align="center">🧩 YouTube Data Connector</h1>
 
 <p align="center">
-	Uma arquitetura modular de micro-frontends para buscar e favoritar vídeos do YouTube, construída com Docker e Webpack Module Federation.
+Arquitetura modular de micro-frontends (React, Angular) para navegar, buscar e favoritar vídeos do YouTube, com Docker e Webpack Module Federation.
 </p>
 
 <p align="center">
@@ -16,27 +16,29 @@
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat" />
   </a>
+  <a href="https://github.com/marcelonovello/YouTube-Data-Connector/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/marcelonovello/YouTube-Data-Connector/ci.yml?style=flat&logo=github" />
+  </a>
   <img src="https://img.shields.io/github/stars/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
   <img src="https://img.shields.io/github/forks/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
-  
 </p>
 
 ---
+
 <a id="visao-geral"></a>
 ## 🔎 Visão Geral
 
-O **YouTube Data Connector** é um projeto que demonstra **micro-frontends modulares**, permitindo múltiplos módulos independentes que podem ser atualizados e implantados separadamente.  
+O **YouTube Data Connector** demonstra arquitetura modular de **micro-frontends** usando Webpack Module Federation e Docker, ideal para módulos independentes que podem ser atualizados e implantados separadamente.  
 
 > 💡 **Por que este projeto é relevante?**  
-> Ele mostra como criar uma arquitetura escalável com **Webpack Module Federation** e **Docker**, ideal para grandes times que precisam integrar e atualizar módulos de forma independente, com alta manutenibilidade e baixo acoplamento.
+> Permite que grandes equipes integrem e atualizem módulos de forma independente, com alta manutenibilidade e baixo acoplamento. 
 
-Funcionalidades principais:
-
-- Buscar vídeos do YouTube.
-- Favoritar vídeos.
-- Navegação fluida entre módulos sem recarregar a aplicação.
-- Arquitetura escalável via Docker.
-- Integração com APIs externas.
+### ✨ Funcionalidades Principais
+- 🔍 Buscar vídeos do YouTube
+- ⭐ Favoritar vídeos
+- 🔄 Navegação fluida entre módulos
+- 🐳 Arquitetura escalável via Docker
+- 🌐 Integração com APIs externas
 
 ---
 
@@ -44,60 +46,55 @@ Funcionalidades principais:
 - [Visão Geral](#visao-geral)
 - [Demonstração](#demonstracao)
 - [Tecnologias](#tecnologias-utilizadas)
-- [Como Executar](#como-executar-o-projeto-local)
+- [Execução local](#execucao-local)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Resolução de Problemas](#resolucao-de-problemas)
+- [Testes](#testes)
+- [Segurança](#seguranca)
 - [Roteiro](#roteiro-do-projeto)
 - [Licença](#licenca)
 - [Aprendizados](#aprendizados)
+- [Contribuição](#como-contribuir)
 - [Contato](#contato)
 
 ---
+
 <a id="demonstracao"></a>
 ## 🎬 Demonstração
 
 <p align="center">
-  <img src="./assets/demo-search.png" alt="Busca de Vídeos" width="80%" />
+  <img src="./assets/demo-full.gif" alt="Demonstração completa da aplicação mostrando busca de vídeos, favoritar e barra de favoritos" width="80%" />
 </p>
-<p align="center">
-  <img src="./assets/demo-favorites.png" alt="Favoritar Vídeos" width="80%" />
-</p>
-<p align="center">
-  <img src="./assets/demo-navigation.png" alt="Navegação entre Módulos" width="80%" />
-</p>
-
 
 💻 **Deploy ativo:**  
-- Frontend: [https://micro-frontends-application.onrender.com/](https://micro-frontends-application.onrender.com/)  
+- Frontend: [https://micro-frontends-application.onrender.com/](https://micro-frontends-application.onrender.com/)
 
 ---
+
 <a id="tecnologias-utilizadas"></a>
 ## 🛠️ Tecnologias Utilizadas
 
 | Camada               | Tecnologias / Ferramentas                 |
-|----------------------|--------------------------------------------|
+|----------------------|-----------------------------------------|
 | Frontend             | [React](https://react.dev/), [Angular](https://angular.dev/), [Webpack Module Federation](https://webpack.js.org/concepts/module-federation/) |
 | Backend / API        | [Node.js](https://nodejs.org/), [Express](https://expressjs.com/) |
 | Containerização      | [Docker](https://www.docker.com/), [Docker Compose](https://docs.docker.com/compose/) |
 | Integração & Deploy  | [GitHub Actions](https://github.com/features/actions), [Docker Hub](https://hub.docker.com/) |
-| Estilo e UI          | [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS), [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML), [Material-UI](https://mui.com/) / [Tailwind](https://tailwindcss.com/) |
+| Estilo e UI          | [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS), [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML), [Material-UI](https://mui.com/), [Tailwind](https://tailwindcss.com/) |
 
 ---
 
-<a id="como-executar-o-projeto-local"></a>
-## 🚀 Como Executar o Projeto (Local)
+<a id="execucao-local"></a>
+## 🚀 Execução Local
 
 ### ⚙️ Pré-requisitos
-
-Antes de começar, verifique se seu ambiente atende aos seguintes requisitos:
-
-- [<img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-- [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
-
+- ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) npm
+- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white) Docker
+- **Chave da API do YouTube** na variável `YOUTUBE_API_KEY`
 
 ### ⬇️ Instalação Rápida
-️1️⃣ Clone o repositório
+1️⃣ Clone o repositório:
 ```bash
 git clone https://github.com/marcelonovello/YouTube-Data-Connector.git
 cd YouTube-Data-Connector
@@ -108,18 +105,15 @@ docker compose up --build
 ```
 3️⃣ Acessar os micro-frontends
 ```bash
-| Micro-frontend | URL local             |
-|----------------|-----------------------|
-| Bff            | http://localhost:3000 |
-| Drawer         | http://localhost:3001 |
-| Video         | http://localhost:3002 |
-
+Bff: http://localhost:3000 
+Drawer: http://localhost:3001 
+Video:http://localhost:3002
 ```
 
 4️⃣ Testar funcionalidades
-- Buscar vídeos → no micro-frontend de vídeo
-- Favoritar vídeos → no drawer
-- Navegação entre módulos → teste links entre os micro-frontends
+- 🔍 Buscar vídeos → micro-frontend de vídeo
+- ⭐ Favoritar vídeos → Drawer
+- 🔄 Navegação entre módulos → links entre micro-frontends
 
 5️⃣ Parar a Aplicação
 ```bash
@@ -180,14 +174,38 @@ docker compose down
 <a id="resolucao-de-problemas"></a>
 ## 🔧 Resolução de Problemas
 
-- ⚠️ **Se as portas já estiverem em uso** → Altere a porta em `.env` ou `docker-compose.yml`.  
-- 🐛 **Se a YouTube API falhar** → Verifique a URL da API ou se o serviço da API está online.  
+- ⚠️ **Se as portas já estiverem em uso** → Altere `PORT` em `.env` ou `docker-compose.yml`.  
+- 🐛 **Se a YouTube API falhar** → Verifique `YOUTUBE_API_KEY` está correta e habilitada
   
+---
+
+<a id="testes"></a>
+## 🧪 Testes
+Execute testes unitários e de integração em cada micro-frontend:
+```bash
+  cd mf_video && npm test
+```
+```bash
+  cd ../mf_drawer && npm test
+```
+```bash
+  cd ../bff && npm test
+```
+
+---
+
+<a id="seguranca"></a>
+## 🔒 Segurança
+- 🔐 Mantenha dependências atualizadas com ``npm audit``.
+- 🛡️ Habilite **Dependabot** no GitHub para monitorar vulnerabilidades.
+- ❌ Nunca exponha ``YOUTUBE_API_KEY`` ou outras chaves sensíveis no repositório.
+
 ---
 
 <a id="roteiro-do-projeto"></a>
 ## 🗺 Roteiro do Projeto
 
+- [X] Arquitetura de micro-frontends implementada
 - [ ] Autenticação via OAuth do YouTube.
 - [ ] Testes unitários e de integração.
 - [ ] CI/CD completo com deploy automático.
@@ -195,12 +213,14 @@ docker compose down
 - [ ] Melhorias visuais e responsividade dos micro-frontends.
 - [ ] Documentação detalhada para cada módulo. 
 
+![Progresso](https://img.shields.io/badge/Progress-40%25-brightgreen)
+
 ---
 
 <a id="licenca"></a>
 ## 📄 Licença
 
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+Licença MIT. Consulte o arquivo [LICENSE](LICENSE).
 
 ---
 
@@ -225,7 +245,7 @@ Contribuições são bem-vindas! Siga os passos abaixo para colaborar com este p
   ```bash
    git checkout -b minha-feature
   ```
-3. Faça as alterações necessárias no código ou na documentação..
+3. Faça as alterações necessárias no código ou na documentação.
 4. Confirme as mudanças (commits) com mensagens claras:
   ```bash
   git commit -m "Adiciona nova funcionalidade X"
@@ -248,4 +268,4 @@ Contribuições são bem-vindas! Siga os passos abaixo para colaborar com este p
 - **GitHub:** [marcelonovello](https://github.com/marcelonovello)  
 - **LinkedIn:** [Marcelo Novello](https://www.linkedin.com/in/marcelo-novello/)  
 
-<p align="center"> ⭐ Se este projeto foi útil, considere deixar uma estrela para apoiar o desenvolvimento! </p>
+<p align="left"> ⭐ Se este projeto foi útil, considere deixar uma estrela para apoiar o desenvolvimento! </p>

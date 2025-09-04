@@ -2,9 +2,7 @@
 
 <h1 align="center">🧩 YouTube Data Connector</h1>
 
-<p align="center">
-A modular micro-frontend architecture to search and favorite YouTube videos, built with Docker and Webpack Module Federation.
-</p>
+<p align="center"> Modular micro-frontends architecture (React, Angular) to browse, search, and favorite YouTube videos, with Docker and Webpack Module Federation. </p>
 
 <p align="center">
   <a href="https://www.docker.com/">
@@ -16,9 +14,11 @@ A modular micro-frontend architecture to search and favorite YouTube videos, bui
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-yellow?style=flat" />
   </a>
+  <a href="https://github.com/marcelonovello/YouTube-Data-Connector/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/marcelonovello/YouTube-Data-Connector/ci.yml?style=flat&logo=github" />
+  </a>
   <img src="https://img.shields.io/github/stars/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
   <img src="https://img.shields.io/github/forks/marcelonovello/YouTube-Data-Connector?style=flat&logo=github" />
-  
 </p>
 
 ---
@@ -26,18 +26,17 @@ A modular micro-frontend architecture to search and favorite YouTube videos, bui
 <a id="overview"></a>
 ## 🔎 Overview
 
-The **YouTube Data Connector** is a project that demonstrates **modular micro-frontends**, allowing multiple independent modules that can be updated and deployed separately.
+**YouTube Data Connector** demonstrates a **modular micro-frontends** architecture using Webpack Module Federation and Docker, ideal for independent modules that can be updated and deployed separately.
 
 > 💡 **Why is this project relevant?**  
-> It demonstrates how to create a scalable architecture with **Webpack Module Federation** and **Docker**, ideal for large teams that need to integrate and update modules independently, with high maintainability and low coupling.
+> It allows large teams to integrate and update modules independently, ensuring high maintainability and low coupling.
 
-Main features:
-
-- Search YouTube videos.
-- Favorite videos.
-- Smooth navigation between modules without reloading the app.
-- Scalable architecture with Docker.
-- Integration with external APIs.
+✨ Key Features
+- 🔍 Search YouTube videos
+- ⭐ Favorite videos
+- 🔄 Smooth navigation between modules
+- 🐳 Scalable architecture via Docker
+- 🌐 Integration with external APIs
 
 ---
 
@@ -46,13 +45,15 @@ Main features:
 - [Overview](#overview)
 - [Demo](#demo)
 - [Technologies Used](#technologies-used)
-- [How to Run the Project Locally](#how-to-run-the-project-locally)
+- [Local Setup](#how-to-run-the-project-locally)
 - [Project Structure](#project-structure)
 - [Troubleshooting](#troubleshooting)
-- [Project Roadmap](#project-roadmap)
+- [Testing](#testing)
+- [Security](#security)
+- [Roadmap](#roadmap)
 - [License](#license)
 - [Learnings](#learnings)
-- [How to Contribute](#how-to-contribute)
+- [Contributing](#how-to-contribute)
 - [Contact](#contact)
 
 ---
@@ -60,15 +61,7 @@ Main features:
 <a id="demo"></a>
 ## 🎬 Demo
 
-<p align="center">
-  <img src="./assets/demo-search.png" alt="Video Search" width="80%" />
-</p>
-<p align="center">
-  <img src="./assets/demo-favorites.png" alt="Favorite Videos" width="80%" />
-</p>
-<p align="center">
-  <img src="./assets/demo-navigation.png" alt="Module Navigation" width="80%" />
-</p>
+<p align="center"> <img src="./assets/demo-full.gif" alt="Full application demo showing video search, favoriting, and favorites bar" width="80%" /> </p>
 
 💻 **Live Deploy:**  
 - Frontend: [https://micro-frontends-application.onrender.com/](https://micro-frontends-application.onrender.com/)
@@ -89,13 +82,14 @@ Main features:
 ---
 
 <a id="how-to-run-the-project-locally"></a>
-## 🚀 How to Run the Project Locally
+## 🚀  Local Setup
 
 ### ⚙️ Prerequisites
 
-- [<img align="center" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [<img align="center" src="https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white" />](https://www.npmjs.com/)
-- [<img align="center" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />](https://www.docker.com/)
+- ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) npm
+- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white) Docker
+- **YouTube API Key** in `YOUTUBE_API_KEY` environment variable
 
 ### ⬇️ Quick Installation
 
@@ -112,17 +106,14 @@ docker compose up --build
 
 3️⃣ Access the micro-frontends
 ```bash
-| Micro-frontend | URL local             |
-|----------------|-----------------------|
-| Bff            | http://localhost:3000 |
-| Drawer         | http://localhost:3001 |
-| Vídeo          | http://localhost:3002 |
-
+Bff: http://localhost:3000 
+Drawer: http://localhost:3001 
+Video: http://localhost:3002
 ```
 4️⃣ Test functionalities
-- Search for videos → in the Video micro-frontend
-- Favorite videos → in the Drawer
-- Navigate between modules → test links between micro-frontends
+- 🔍 Search videos → Video micro-frontend
+- ⭐ Favorite videos → Drawer
+- 🔄 Navigate between modules → links between micro-frontends
 
 5️⃣ Stop the application
 ```bash
@@ -183,14 +174,39 @@ docker compose down
 
 <a id="troubleshooting"></a>
 ## 🔧 Troubleshooting
-- ⚠️ **If ports are already in use** → change PORT in .env or docker-compose.yml
-- 🐛 **If YouTube API fails** → verify your YOUTUBE_API_KEY is correct and enabled
+- ⚠️ **If ports are already in use** → change ``PORT`` in ``.env`` or ``docker-compose.yml``.
+- 🐛 **If YouTube API fails** → verify your ``YOUTUBE_API_KEY`` is correct and enabled
 
 ---
 
-<a id="project-roadmap"></a>
-## 🗺 Project Roadmap
+<a id="testing"></a>
 
+🧪 Testing
+Run unit and integration tests in each micro-frontend:
+```bash
+  cd mf_video && npm test
+```
+```bash
+  cd ../mf_drawer && npm test
+```
+```bash
+  cd ../bff && npm test
+```
+
+---
+
+<a id="security"></a>
+## 🔒 Security
+- 🔐 Keep dependencies updated using npm audit.
+- 🛡️ Enable Dependabot on GitHub to monitor vulnerabilities.
+- ❌ Never expose YOUTUBE_API_KEY or other sensitive keys in the repository.
+
+---
+
+<a id="roadmap"></a>
+## 🗺 Roadmap
+
+- [X] Micro-frontends architecture implemented
 - [ ] YouTube OAuth authentication.
 - [ ] Unit and integration tests.
 - [ ] Full CI/CD with automatic deploy
@@ -198,22 +214,24 @@ docker compose down
 - [ ] UI/UX improvements and responsiveness.
 - [ ] Detailed documentation per module.
 
+![Progress](https://img.shields.io/badge/Progress-40%25-brightgreen)
+
 ---
 
 <a id="license"></a>
 
 ## 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+MIT License. See the [LICENSE](LICENSE) file.
 
 ---
 
 <a id="learnings"></a>
 ## 📚 Learnings
-- ⚡ Practical application of Webpack Module Federation.
-- 🐳 Docker usage for reproducible deployments.
-- 🛠️ Integration with YouTube Data API.
-- 🌐 Git best practices, commits, and documentation.
-- 🎨 UI/UX improvements and code modularization.
+- ⚡ Hands-on Webpack Module Federation
+- 🐳 Docker for reproducible deployments
+- 🛠️ Integration with YouTube Data API
+- 🌐 Git best practices, commits, and documentation
+- 🎨 UI/UX improvement and code modularization
 
 ---
 
